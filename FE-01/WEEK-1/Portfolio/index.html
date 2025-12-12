@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar -->
+     <nav>
+        <div class="left">
+            <a href="/">Anshuman</a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/Ansh30a" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/heyansh/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-square-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="mailto:anshuman302004@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+     </nav>
+
+     <main>
+        <!-- SECTION: 1 -> HERO -->
+        <section id="hero" class="hero-section">
+            <div class="text">
+                <h2>Hi, I am Anshuman.</h2>
+                <p>I’m a Computer Science student and full-stack developer passionate about creating impactful and user-friendly web applications. I enjoy building projects that combine functionality with clean design — from intuitive React interfaces to efficient Node.js backends. I’m always exploring new technologies and improving my skills through hands-on projects.</p>
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="headshot">
+                <img src="images/hero-headshot.png" alt="headshot">
+            </div>
+        </section>
+
+        <!-- SECTION: 2 -> SKILLS -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">
+                <p>I have hands-on experience with full-stack development using the MERN stack. I enjoy working on both the front-end and back-end — building responsive interfaces, creating secure APIs, and connecting everything into a seamless product. I also explore IoT, AI, and automation-based projects to blend software with hardware innovation.</p>
+            </div>
+
+            <div class="cells">
+                <div class="cell">
+                    <img src="images/html-logo.webp" alt="">
+                    <span>HTML</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="">
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="">
+                    <span>JS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/node-logo.webp" alt="">
+                    <span>NodeJS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/react-logo.webp" alt="">
+                    <span>ReactJS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: 3 -> CONTACT -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+
+            <div class="group">
+                <div class="text">
+                    <p>I’m always open to new opportunities, collaborations, and project discussions. Whether it’s about web development, IoT, or AI-driven solutions — feel free to reach out. Let’s connect and build something amazing together!</p>
+                </div>
+
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="name">Message</label>
+                    <textarea id="message" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Send Message!!!</button>
+                </form>
+            </div>
+        </section>
+     </main>
+</body>
+</html>
