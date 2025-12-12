@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h1>
+        HTML Forms
+    </h1>
+
+    <form>
+        <label for="username">User Name: </label>
+        <input 
+            type="text" 
+            id="username"
+            name="username"
+            required
+        >
+        <br> <br>
+        <label for="email">Email: </label>
+        <input 
+            type="email"
+            id="email"
+            name="email"
+        >
+        <br> <br>
+        <label for="password">Password: </label>
+        <input 
+            type="password"
+            id="password"
+            name="password"
+        >
+        <p>Select your Age: </p>
+
+        <input type="radio" name="age" value="0-25" id="option1">
+        <label for="option1">0-25</label>
+        <input type="radio" name="age" value="26-50" id="option2">
+        <label for="option2">26-50</label>
+        <input type="radio" name="age" value="51+" id="option3">
+        <label for="option3">51+</label>
+
+        <br><br>
+
+        <label for="security">Security question: </label>
+        <select name="security" id="security">
+            <option value="q1">What color is your favourite?</option>
+            <option value="q2">Your nickname?</option>
+        </select>
+
+        <br><br>
+
+        <label for="answer">Security question Answer: </label>
+        <input type="text" id="answer" name="answer">
+
+        <br><br>
+
+        <label for="bio">Your Bio: </label>
+        <br>
+        <textarea name="bio" id="bio" cols="30" rows="18" placeholder="Write your bio: "></textarea>
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
