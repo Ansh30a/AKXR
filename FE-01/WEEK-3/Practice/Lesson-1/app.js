@@ -37,7 +37,21 @@
 
 // --------------------------------LESSON: 05 ---------------------------------------------->
 
-const books = document.querySelectorAll('#book-list li .name')
-Array.from(books).forEach((book) => book.textContent += ' (Book Title)')
+// const books = document.querySelectorAll('#book-list li .name')
+// Array.from(books).forEach((book) => book.textContent += ' (Book Title)')
 
-const bookList = document.querySelector('#book-list')
+// const bookList = document.querySelector('#book-list')
+// bookList.innerHTML = '<h1> Books </h1>'
+// bookList.innerHTML += '<p>HTML</p>'
+
+
+
+// --------------------------------LESSON: 05 ---------------------------------------------->
+
+const banner = document.querySelector('#page-banner')
+// console.log('#page-banner node type is:', banner.nodeType)
+// console.log('#page-banner node type is:', banner.nodeName)
+// console.log('#page-banner node type is:', banner.hasChildNodes())
+
+const clonedBanner = banner.cloneNode(true)
+console.log(clonedBanner)
