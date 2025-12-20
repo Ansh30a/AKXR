@@ -52,10 +52,6 @@ input {
     flex: 1 1 0%;
     padding: 1rem;
     border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
     margin-right: 1rem;
     color: var(--darkest);
     font-size: 1.5rem;
@@ -87,24 +83,72 @@ main {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-}
-
-main {
     padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
 }
 
 .task-list {
-    padding: 1 rem;
+    padding: 1rem;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .task-list h2 {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--grey);
-    margin-bottom: 1rem;
+}
+
+.task-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.task-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--grey);
+    font-size: 1rem;
+}
+
+.task-counter strong {
+    color: var(--blue);
+}
+
+.separator {
+    color: var(--grey);
+    opacity: 0.5;
+}
+
+.clear-btn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.clear-btn:active {
+    opacity: 0.6;
+    transform: translateY(0);
 }
 
 #tasks .task {
@@ -116,10 +160,30 @@ main {
     border-radius: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.task.completed {
+    opacity: 0.6;
+}
+
+.task.completed .text {
+    text-decoration: line-through;
+    color: var(--grey) !important;
 }
 
 .task .content {
     flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--green);
 }
 
 .task .content .text {
@@ -127,9 +191,10 @@ main {
     font-size: 1.125rem;
     display: block;
     transition: color 0.4s ease;
+    flex: 1;
 }
 
-.task .content .text-:not(:read-only) {
+.task .content .text:not(:read-only) {
     color: var(--blue);
     font-weight: 600;
 }
@@ -139,6 +204,10 @@ main {
     margin: 0 -0.5rem;
     font-size: 1.5rem;
     transition: 0.4s;
+}
+
+.task .edit-delete i {
+    cursor: pointer;
 }
 
 .task .edit-delete i:hover {

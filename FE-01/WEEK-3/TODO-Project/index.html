@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:wght@100;200; 300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,18 +18,18 @@
     </header>
     <main>
         <section class="task-list">
-            <h2>Tasks: </h2>
-            <div id="tasks">
-                <!-- <div class="task">
-                    <div class="content">
-                        <input type="text" class="text" value="A new task">
+            <div class="task-header">
+                <h2>Tasks</h2>
+                <div class="task-controls">
+                    <div class="task-counter">
+                        <span>Total: <strong id="total-tasks">0</strong></span>
+                        <span class="separator">|</span>
+                        <span>Completed: <strong id="completed-tasks">0</strong></span>
                     </div>
-                    <div class="edit-delete">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
-                    </div>
-                </div> -->
+                    <button id="clear-completed" class="clear-btn">Clear Completed</button>
+                </div>
             </div>
+            <div id="tasks"></div>
         </section>
     </main>
 
