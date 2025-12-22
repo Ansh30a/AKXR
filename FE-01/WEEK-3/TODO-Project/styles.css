@@ -227,3 +227,20 @@ main {
     color: var(--green);
     margin-right: 1rem;
 }
+
+@media (max-width: 480px) {
+    #new-task-input::placeholder {
+        font-size: 0.75em;
+    }
+
+    #new-task-form  {
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #new-task-submit {
+        font-size: 1.25em;
+        margin-top: 10px;
+    }
+}
