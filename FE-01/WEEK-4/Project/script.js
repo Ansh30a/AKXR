@@ -33,3 +33,24 @@ sliderBtns.forEach((sliderBtn, i) => {
         sliderNav(i)
     })
 })
+
+// FOR THEME TOGGLE
+const themeToggle = document.querySelector('.theme-toggle')
+const icon = themeToggle.querySelector('i')
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark')
+    icon.classList.replace('fa-moon', 'fa-sun')
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+
+    if (document.body.classList.contains('dark')) {
+        icon.classList.replace('fa-moon', 'fa-sun')
+        localStorage.setItem('theme', 'dark')
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon')
+        localStorage.setItem('theme', 'light')
+    }
+})
