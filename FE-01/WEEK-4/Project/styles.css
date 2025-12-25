@@ -232,6 +232,13 @@ section {
     cursor: pointer;
     margin-left: 20px;
     transition: 0.3s ease;
+    position: absolute;
+    right: 30px;
+    z-index: 888;
+}
+
+.theme-toggle:before {
+    height: 3px;
 }
 
 .theme-toggle:hover {
@@ -390,4 +397,11 @@ section {
     header .navigation .navigation-items a {
         font-size: 1.3em;
     }
+
+    .theme-toggle {
+        position: static;
+        transform: none;
+        margin-left: 15px;
+    }
+
 }
