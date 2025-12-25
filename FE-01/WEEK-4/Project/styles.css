@@ -21,7 +21,7 @@ body.dark {
     --brand-color: #ffffff;
     --button-bg: #1e1e1e;
     --button-text: #ffffff;
-    --dot-active: #ffffff;
+    --dot-active: black;
 }
 
 * {
