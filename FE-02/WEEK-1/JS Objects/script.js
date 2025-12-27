@@ -6,10 +6,10 @@ let user = {
     blogs: ['hello', 'bye']
 }
 
-console.log(user)
+// console.log(user)
 
-console.log(user.name)
+// console.log(user.name)
 
-user.age = 21
+// user.age = 21
 
-console.log(user.age)
+// console.log(user.age)
