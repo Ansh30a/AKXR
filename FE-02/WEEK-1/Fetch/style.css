@@ -1,0 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#pokemon {
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    transition: 0.5s ease;
+}
+
+.search-bar button {
+    top: 10px;
+    left: 10px;
+    width: 50%;
+    display: block;
+    margin: 100px 0 10px 0;
+}
