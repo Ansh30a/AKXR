@@ -22,7 +22,7 @@ var sliderNav = function(manual) {
     contents.forEach((content) => {
         content.classList.remove('active')
     })
-
+    
     sliderBtns[manual].classList.add('active')
     slides[manual].classList.add('active')
     contents[manual].classList.add('active')
@@ -45,7 +45,6 @@ if (localStorage.getItem('theme') === 'dark') {
 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark')
-
     if (document.body.classList.contains('dark')) {
         icon.classList.replace('fa-moon', 'fa-sun')
         localStorage.setItem('theme', 'dark')
