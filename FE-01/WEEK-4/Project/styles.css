@@ -4,7 +4,7 @@
 
 /* Light Mode (default) */
 :root {
-    --bg-overlay: rgba(3, 96, 251, 0.3);
+    --bg-overlay: #0360fb4d;
     --text-color: #ffffff;
     --nav-text: #f4d8d8;
     --brand-color: wheat;
@@ -412,12 +412,26 @@ section {
 .city-explorer {
     min-height: 100vh;
     padding: 80px 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: url('https://images.unsplash.com/photo-1626163450208-0fb18eb43b99?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 
+.city-explorer:before {
+    background: var(--bg-overlay);
+}
+
 body.dark .city-explorer {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: url('https://images.unsplash.com/photo-1626163450208-0fb18eb43b99?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body.dark .city-explorer:before {
+    background: var(--bg-overlay);
 }
 
 .explorer-container {

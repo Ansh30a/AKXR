@@ -347,25 +347,24 @@ function displayPlaces(places) {
     }
     
     placesContent.innerHTML = places.slice(0, 8).map(place => {
-        // Format categories
         const categoryNames = Array.isArray(place.categories) 
             ? place.categories.slice(0, 2).map(cat => {
                 return cat.split('.').pop().replace(/_/g, ' ')
               }).join(', ')
             : 'Attraction'
         
-        // Format distance
         const distance = place.distance 
             ? (place.distance < 1000 
                 ? `${Math.round(place.distance)}m away` 
                 : `${(place.distance / 1000).toFixed(1)}km away`)
             : ''
         
-        // Use Unsplash for placeholder images
         const photoUrl = `https://source.unsplash.com/400x300/?${encodeURIComponent(place.name)},landmark,${encodeURIComponent(place.city || 'city')}`
         
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lon}`
+        
         return `
-            <div class="place-card">
+            <div class="place-card" onclick="window.open('${mapsUrl}', '_blank')">
                 <div class="place-image">
                     <img src="${photoUrl}" alt="${place.name}" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop'">
                     ${distance ? `<span class="place-distance">${distance}</span>` : ''}
@@ -383,6 +382,7 @@ function displayPlaces(places) {
         `
     }).join('')
 }
+
 
 // UI Helper Functions
 function showLoading() {
