@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Travel Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <a href="#" class="brand">Travel</a>
         <div class="menu-btn"></div>
@@ -26,42 +25,47 @@
             <i class="fas fa-moon"></i>
         </button>
     </header>
+
+    <!-- HOME HERO SECTION -->
     <section class="home">
-        <video class="video-slide active" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347985/1_cceqvb.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347957/2_aj6wu5.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347963/3_kt6acf.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766348073/4_qyazyf.mp4" autoplay muted loop></video>
-        <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347958/5_xnhaex.mp4" autoplay muted loop></video>
+        <video class="video-slide active" src="images/1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/5.mp4" autoplay muted loop></video>
+        
         <div class="content active">
             <h1>Wonderful.<br><span>Island</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sapiente?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
         <div class="content">
-            <h1>Camping.<br><span>Enjoy</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sapiente?</p>
+            <h1>Hiking.<br><span>Mountains</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
         <div class="content">
-            <h1>Adventures.<br><span>Off Road</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sapiente?</p>
+            <h1>Beautiful.<br><span>Nature</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
         <div class="content">
-            <h1>Road Trip.<br><span>Together</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sapiente?</p>
+            <h1>Tropical.<br><span>Beach</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
         <div class="content">
-            <h1>Feel Nature.<br><span>Relax</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sapiente?</p>
+            <h1>Greatest.<br><span>Sunset</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
+        
         <div class="media-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
+        
         <div class="slider-navigation">
             <div class="nav-btn active"></div>
             <div class="nav-btn"></div>
@@ -70,6 +74,46 @@
             <div class="nav-btn"></div>
         </div>
     </section>
+
+    <!-- CITY EXPLORER SECTION -->
+    <section class="city-explorer">
+        <div class="explorer-container">
+            <h2 class="explorer-title">Explore Destinations</h2>
+            <p class="explorer-subtitle">Discover amazing places, activities, and current weather conditions</p>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="cityInput" placeholder="Enter city name (e.g., Paris, Tokyo, New York)" />
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i> Explore
+                    </button>
+                </div>
+                <div id="errorMessage" class="error-message"></div>
+                <div id="loadingSpinner" class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i> Loading...
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="results-container">
+                <!-- Weather Section -->
+                <div id="weatherSection" class="weather-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-cloud-sun"></i> Current Weather
+                    </h3>
+                    <div id="weatherContent" class="weather-content"></div>
+                </div>
+
+                <!-- Places Section -->
+                <div id="placesSection" class="places-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-map-marker-alt"></i> Top Places to Visit
+                    </h3>
+                    <div id="placesContent" class="places-grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
