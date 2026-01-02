@@ -7,4 +7,5 @@ function b() {
 console.log(a)
 
 console.log(this)
-console.log(this === window)
+
+// console.log(this === window)
