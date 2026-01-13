@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="stylesheet" href="styles.css">
@@ -15,11 +16,11 @@
         <div class="menu-btn"></div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Explore</a>
-                <a href="#">Gallery</a>
-                <a href="#">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
         <button class="theme-toggle">
@@ -28,15 +29,17 @@
     </header>
 
     <!-- HOME HERO SECTION -->
-    <section class="home">
+    <section class="home" id="home">
+        <!-- ORIGINAL VIDEOS PRESERVED -->
         <video class="video-slide active" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347985/1_cceqvb.mp4" autoplay muted loop></video>
         <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347957/2_aj6wu5.mp4" autoplay muted loop></video>
         <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347963/3_kt6acf.mp4" autoplay muted loop></video>
         <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766348073/4_qyazyf.mp4" autoplay muted loop></video>
         <video class="video-slide" src="https://res.cloudinary.com/dhjz00szj/video/upload/v1766347958/5_xnhaex.mp4" autoplay muted loop></video>
-        
+
+        <!-- ORIGINAL CONTENT PRESERVED -->
         <div class="content active">
-            <h1>Wonderful.<br><span>Island</span></h1>
+            <h1>Wonderful.<br><span>Islands</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
@@ -56,17 +59,47 @@
             <a href="#">Read More</a>
         </div>
         <div class="content">
-            <h1>Greatest.<br><span>Sunset</span></h1>
+            <h1>Greatest.<br><span>Sunsets</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque est officiis aperiam fuga dolorum, pariatur molestiae, dignissimos ratione minus sed quos molestias asperiores laboriosam eius!</p>
             <a href="#">Read More</a>
         </div>
-        
+
+        <!-- CITY EXPLORER INTEGRATED INTO HOME -->
+        <div class="search-container-home">
+            <h2 class="search-title">Explore Destinations</h2>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name (e.g., Paris, Tokyo, New York)">
+                <button id="searchBtn"><i class="fas fa-search"></i> Explore</button>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+            <div id="loadingSpinner" class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i> Loading...
+            </div>
+        </div>
+
+        <!-- RESULTS CONTAINER IN HOME -->
+        <div id="resultsContainer" class="results-container">
+            <!-- Weather Section -->
+            <div id="weatherSection" class="weather-section">
+                <h3 class="section-title"><i class="fas fa-cloud-sun"></i> Current Weather</h3>
+                <div id="weatherContent" class="weather-content"></div>
+            </div>
+
+            <!-- Places Section -->
+            <div id="placesSection" class="places-section">
+                <h3 class="section-title"><i class="fas fa-map-marker-alt"></i> Top Places to Visit</h3>
+                <div id="placesContent" class="places-grid"></div>
+            </div>
+        </div>
+
+        <!-- ORIGINAL SOCIAL MEDIA ICONS PRESERVED -->
         <div class="media-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-        
+
+        <!-- ORIGINAL SLIDER NAVIGATION PRESERVED -->
         <div class="slider-navigation">
             <div class="nav-btn active"></div>
             <div class="nav-btn"></div>
@@ -76,41 +109,204 @@
         </div>
     </section>
 
-    <!-- CITY EXPLORER SECTION -->
-    <section class="city-explorer">
-        <div class="explorer-container">
-            <h2 class="explorer-title">Explore Destinations</h2>
-            <p class="explorer-subtitle">Discover amazing places, activities, and current weather conditions</p>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <input type="text" id="cityInput" placeholder="Enter city name (e.g., Paris, Tokyo, New York)" />
-                    <button id="searchBtn">
-                        <i class="fas fa-search"></i> Explore
-                    </button>
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="section-heading">About Our Journey</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Discover Amazing Destinations</h3>
+                    <p>We are passionate travelers dedicated to helping explorers find the best destinations and experiences around the world. Our mission is to connect people with unforgettable adventures through carefully curated travel locations.</p>
+                    <p>With years of experience exploring diverse cultures, landscapes, and hidden gems, we provide authentic insights and practical information to make your travels extraordinary.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>200+</h4>
+                            <p>Destinations</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <p>Countries</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>10K+</h4>
+                            <p>Happy Travelers</p>
+                        </div>
+                    </div>
                 </div>
-                <div id="errorMessage" class="error-message"></div>
-                <div id="loadingSpinner" class="loading-spinner">
-                    <i class="fas fa-spinner fa-spin"></i> Loading...
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" alt="Travel Adventure">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div id="resultsContainer" class="results-container">
-                <!-- Weather Section -->
-                <div id="weatherSection" class="weather-section">
-                    <h3 class="section-title">
-                        <i class="fas fa-cloud-sun"></i> Current Weather
-                    </h3>
-                    <div id="weatherContent" class="weather-content"></div>
+    <!-- DESTINATIONS SECTION -->
+    <section class="destinations" id="destinations">
+        <div class="destinations-container">
+            <h2 class="section-heading">Popular Destinations</h2>
+            <p class="section-subtitle">Explore our handpicked travel destinations</p>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> France</p>
+                        <p class="destination-desc">Experience the city of lights with iconic landmarks, world-class cuisine, and romantic ambiance.</p>
+                        <a href="#" class="destination-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600" alt="Tokyo">
+                    <div class="destination-info">
+                        <h3>Tokyo</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Japan</p>
+                        <p class="destination-desc">Discover the perfect blend of ancient tradition and cutting-edge modernity in Japan's vibrant capital.</p>
+                        <a href="#" class="destination-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600" alt="Santorini">
+                    <div class="destination-info">
+                        <h3>Santorini</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Greece</p>
+                        <p class="destination-desc">Explore stunning white-washed villages, crystal blue waters, and breathtaking sunsets.</p>
+                        <a href="#" class="destination-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600" alt="New York">
+                    <div class="destination-info">
+                        <h3>New York</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> USA</p>
+                        <p class="destination-desc">Experience the city that never sleeps with world-famous attractions and diverse culture.</p>
+                        <a href="#" class="destination-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="Dubai">
+                    <div class="destination-info">
+                        <h3>Dubai</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> UAE</p>
+                        <p class="destination-desc">Witness futuristic architecture, luxury shopping, and desert adventures in this modern marvel.</p>
+                        <a href="#" class="destination-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=600" alt="Bali">
+                    <div class="destination-info">
+                        <h3>Bali</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Indonesia</p>
+                        <p class="destination-desc">Relax in tropical paradise with stunning beaches, temples, and lush rice terraces.</p>
+                        <a href="#" class="destination-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Places Section -->
-                <div id="placesSection" class="places-section">
-                    <h3 class="section-title">
-                        <i class="fas fa-map-marker-alt"></i> Top Places to Visit
-                    </h3>
-                    <div id="placesContent" class="places-grid"></div>
+    <!-- GALLERY SECTION -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-container">
+            <h2 class="section-heading">Travel Gallery</h2>
+            <p class="section-subtitle">Captured moments from around the world</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Mountain">
+                    <div class="gallery-overlay">
+                        <h4>Mountain Peaks</h4>
+                        <p>Alpine Adventure</p>
+                    </div>
                 </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Beach">
+                    <div class="gallery-overlay">
+                        <h4>Tropical Beach</h4>
+                        <p>Paradise Found</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600" alt="City">
+                    <div class="gallery-overlay">
+                        <h4>City Lights</h4>
+                        <p>Urban Explorer</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600" alt="Lake">
+                    <div class="gallery-overlay">
+                        <h4>Serene Lake</h4>
+                        <p>Nature's Mirror</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600" alt="Road">
+                    <div class="gallery-overlay">
+                        <h4>Open Road</h4>
+                        <p>Journey Ahead</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=600" alt="Sunset">
+                    <div class="gallery-overlay">
+                        <h4>Golden Sunset</h4>
+                        <p>Day's End</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We'd love to hear from you</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Travel Street<br>Adventure City, AC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@travelwebsite.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat - Sun: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
     </section>
