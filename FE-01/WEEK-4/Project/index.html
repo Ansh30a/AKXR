@@ -16,10 +16,12 @@
         <div class="navigation">
             <div class="navigation-items">
                 <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Explore</a>
-                <a href="#">Gallery</a>
-                <a href="#">Contact</a>
+                <div class="header-search">
+                    <input type="text" id="cityInput" placeholder="Search destination...">
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </div>
         <button class="theme-toggle">
@@ -83,12 +85,6 @@
             <p class="explorer-subtitle">Discover amazing places, activities, and current weather conditions</p>
             
             <div class="search-container">
-                <div class="search-box">
-                    <input type="text" id="cityInput" placeholder="Enter city name (e.g., Paris, Tokyo, New York)" />
-                    <button id="searchBtn">
-                        <i class="fas fa-search"></i> Explore
-                    </button>
-                </div>
                 <div id="errorMessage" class="error-message"></div>
                 <div id="loadingSpinner" class="loading-spinner">
                     <i class="fas fa-spinner fa-spin"></i> Loading...
