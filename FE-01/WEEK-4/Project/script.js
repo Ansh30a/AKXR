@@ -38,19 +38,17 @@ sliderBtns.forEach((sliderBtn, i) => {
 const themeToggle = document.querySelector('.theme-toggle')
 const icon = themeToggle.querySelector('i')
 
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark')
-    icon.classList.replace('fa-moon', 'fa-sun')
-}
+// Use memory variable instead of localStorage
+let currentTheme = 'light'
 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark')
     if (document.body.classList.contains('dark')) {
         icon.classList.replace('fa-moon', 'fa-sun')
-        localStorage.setItem('theme', 'dark')
+        currentTheme = 'dark'
     } else {
         icon.classList.replace('fa-sun', 'fa-moon')
-        localStorage.setItem('theme', 'light')
+        currentTheme = 'light'
     }
 })
 
@@ -206,7 +204,7 @@ async function getGeoapifyPlaces(lat, lon, cityName) {
         
         const url = `https://api.geoapify.com/v2/places?categories=${categories}&filter=circle:${lon},${lat},${radius}&limit=20&apiKey=${GEOAPIFY_API_KEY}`
         
-        console.log('🌐 Fetching places from Geoapify...')
+        console.log('🌍 Fetching places from Geoapify...')
         
         const requestOptions = {
             method: 'GET',
@@ -334,7 +332,7 @@ function displayWeather(weather) {
     `
 }
 
-// Display places
+// Display places - Modified to open in new tab when card is clicked
 function displayPlaces(places) {
     if (!places || places.length === 0) {
         placesContent.innerHTML = `
