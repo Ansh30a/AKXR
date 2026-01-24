@@ -1,5 +1,34 @@
 .restaurant-card {
+    /* padding: 1em; */
     border-radius: 10px;
-    border: 1px solid black;
-    margin-top: 5em;
+    border: 1px solid none;
+    margin-top: 2em;
+    width: 20em;
+    height: 27.5em;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin-left: 1em;
+    transition: 0.5s ease;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.restaurant-card > img {
+    margin: 1em;
+    width: 18em;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.restaurant-card > h3 {
+    margin-left: 1em;
+}
+
+.restaurant-card > h4 {
+    margin-left: 1rem;
+}
+
+.restaurant-card > h5 {
+    margin-left: 1rem;
 }
