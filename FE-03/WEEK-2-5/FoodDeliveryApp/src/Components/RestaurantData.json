@@ -1,0 +1,1714 @@
+{
+    "restaurants": [
+        {
+            "info": {
+                "id": "605415",
+                "name": "Dum Safar Biryani",
+                "cloudinaryImageId": "l9pbure8tbootzc7utmn",
+                "locality": "Interiorz Mall",
+                "areaName": "Sector 35",
+                "costForTwo": "₹500 for two",
+                "cuisines": [
+                    "Biryani",
+                    "Kebabs",
+                    "North Indian",
+                    "Barbecue"
+                ],
+                "avgRating": 4,
+                "parentId": "351013",
+                "avgRatingString": "4.0",
+                "totalRatingsString": "699",
+                "sla": {
+                    "deliveryTime": 43,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "40-45 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 01:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹64"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/dum-safar-biryani-interiorz-mall-sector-35-rest605415",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "821106",
+                "name": "Biryani Badshah",
+                "cloudinaryImageId": "035ae537abed20f3066a7a1003fa5b73",
+                "locality": "Greenfields",
+                "areaName": "Greenfields_FBD",
+                "costForTwo": "₹350 for two",
+                "cuisines": [
+                    "Biryani",
+                    " Hyderabadi",
+                    " Andhra",
+                    " Lucknowi",
+                    " Kolkata",
+                    " Desserts",
+                    "Beverages"
+                ],
+                "avgRating": 4.3,
+                "parentId": "10703",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "367",
+                "sla": {
+                    "deliveryTime": 43,
+                    "lastMileTravel": 4.8,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "40-45 mins",
+                    "lastMileTravelString": "4.8 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 02:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹49"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/biryani-badshah-greenfields-greenfields-fbd-rest821106",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "751420",
+                "name": "Subway",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/12/f82f7dda-a59e-4704-9ec5-07f6b5250ac9_751420.jpg",
+                "locality": "SECTOR 31",
+                "areaName": "HUDA SHOPPING COMPLEX",
+                "costForTwo": "₹350 for two",
+                "cuisines": [
+                    "sandwich",
+                    "Salads",
+                    "wrap",
+                    "Healthy Food"
+                ],
+                "avgRating": 4,
+                "parentId": "2",
+                "avgRatingString": "4.0",
+                "totalRatingsString": "1.8K+",
+                "sla": {
+                    "deliveryTime": 36,
+                    "lastMileTravel": 3.5,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "3.5 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 02:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹69"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/subway-sector-31-huda-shopping-complex-rest751420",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "222633",
+                "name": "Domino's Pizza",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/11/11/83dd918b-2ee1-4daf-8fe3-0d26db00d086_222633.JPG",
+                "locality": "Town Park",
+                "areaName": "Sector 37",
+                "costForTwo": "₹400 for two",
+                "cuisines": [
+                    "Pizzas",
+                    "Italian",
+                    "Pastas",
+                    "Desserts"
+                ],
+                "avgRating": 4,
+                "parentId": "2456",
+                "avgRatingString": "4.0",
+                "totalRatingsString": "2.9K+",
+                "sla": {
+                    "deliveryTime": 30,
+                    "lastMileTravel": 3.9,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "25-30 mins",
+                    "lastMileTravelString": "3.9 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-24 23:59:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "50% OFF",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/dominos-pizza-town-park-sector-37-rest222633",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "619121",
+                "name": "Great Indian Khichdi by EatFit",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/21/c7a92de4-7eba-4e8b-a429-d596d114b213_619121.JPG",
+                "locality": "Neelam Bata Chowk",
+                "areaName": "Sector 31",
+                "costForTwo": "₹200 for two",
+                "cuisines": [
+                    "Indian",
+                    "Home Food",
+                    "Healthy Food",
+                    "Snacks"
+                ],
+                "avgRating": 4.3,
+                "veg": true,
+                "parentId": "319582",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "1.0K+",
+                "sla": {
+                    "deliveryTime": 35,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-45 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "High%20Protein/rx%20tag%205.png",
+                            "description": "High Protein"
+                        },
+                        {
+                            "imageId": "v1695133679/badges/Pure_Veg111.png",
+                            "description": "pureveg"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "High Protein",
+                                        "imageId": "High%20Protein/rx%20tag%205.png"
+                                    }
+                                },
+                                {
+                                    "attributes": {
+                                        "description": "pureveg",
+                                        "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹49"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/great-indian-khichdi-by-eatfit-neelam-bata-chowk-sector-31-rest619121",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "619123",
+                "name": "EatFit",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/21/bc5fb52e-d93e-4c59-86f0-5efa74057da6_619123.JPG",
+                "locality": "Neelam Bata Chowk",
+                "areaName": "Sector 31",
+                "costForTwo": "₹270 for two",
+                "cuisines": [
+                    "North Indian",
+                    "Healthy Food",
+                    "Thalis"
+                ],
+                "avgRating": 4.3,
+                "parentId": "76139",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "1.6K+",
+                "sla": {
+                    "deliveryTime": 36,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-45 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "High%20Protein/rx%20tag%205.png",
+                            "description": "High Protein"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "High Protein",
+                                        "imageId": "High%20Protein/rx%20tag%205.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹33"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/eatfit-neelam-bata-chowk-sector-31-rest619123",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "772035",
+                "name": "McDonald's",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/9/2968d595-3169-4fcc-9004-26539baa1288_772035.JPG",
+                "locality": "Metro Station",
+                "areaName": "Greenfields_FBD",
+                "costForTwo": "₹400 for two",
+                "cuisines": [
+                    "American",
+                    "Fast Food"
+                ],
+                "avgRating": 4.5,
+                "parentId": "630",
+                "avgRatingString": "4.5",
+                "totalRatingsString": "3.1K+",
+                "sla": {
+                    "deliveryTime": 40,
+                    "lastMileTravel": 5.6,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "5.6 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 01:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Rxawards/_CATEGORY-Burger.png",
+                            "description": "Delivery!"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Rxawards/_CATEGORY-Burger.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹117"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/mcdonalds-metro-station-greenfields-fbd-rest772035",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "314424",
+                "name": "Natural Ice Cream",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/21/fdb7a86c-f65b-47c7-908d-5b1d103fde4a_314424.jpg",
+                "locality": "Jagdamba Road",
+                "areaName": "Kalkaji",
+                "costForTwo": "₹150 for two",
+                "cuisines": [
+                    "Ice Cream",
+                    "Desserts"
+                ],
+                "avgRating": 4.8,
+                "veg": true,
+                "parentId": "2093",
+                "avgRatingString": "4.8",
+                "totalRatingsString": "1.6K+",
+                "sla": {
+                    "deliveryTime": 36,
+                    "lastMileTravel": 11.3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "11.3 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-24 23:59:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Ratnesh_Badges/Rx_Awards_2025/Icecream.png",
+                            "description": "Delivery!"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "aggregatedDiscountInfoV2": {},
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Ratnesh_Badges/Rx_Awards_2025/Icecream.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/natural-ice-cream-jagdamba-road-kalkaji-rest314424",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "49246",
+                "name": "Sweet Truth - Cake and Desserts",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/6/3385e58c-c280-44a1-a38b-ca3a55e61b6f_49246.JPG",
+                "locality": "Pocket D & E Sarita Vihar",
+                "areaName": "Sarita Vihar",
+                "costForTwo": "₹450 for two",
+                "cuisines": [
+                    "Snacks",
+                    "Bakery",
+                    "Desserts",
+                    "Beverages"
+                ],
+                "avgRating": 4.3,
+                "parentId": "4444",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "1.9K+",
+                "sla": {
+                    "deliveryTime": 35,
+                    "lastMileTravel": 8.2,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-45 mins",
+                    "lastMileTravelString": "8.2 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-24 23:59:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹79"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/sweet-truth-cake-and-desserts-pocket-d-and-e-sarita-vihar-rest49246",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "738769",
+                "name": "Cheesecake & Co.",
+                "cloudinaryImageId": "b318c0b4bc2169550145ace1d6e791a2",
+                "locality": "vicky complex",
+                "areaName": "Sector 15 FBD",
+                "costForTwo": "₹500 for two",
+                "cuisines": [
+                    "Bakery",
+                    "Desserts"
+                ],
+                "avgRating": 4.6,
+                "veg": true,
+                "parentId": "387417",
+                "avgRatingString": "4.6",
+                "totalRatingsString": "803",
+                "sla": {
+                    "deliveryTime": 32,
+                    "lastMileTravel": 2.4,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "30-35 mins",
+                    "lastMileTravelString": "2.4 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Rxawards/_CATEGORY-Desserts.png",
+                            "description": "Delivery!"
+                        },
+                        {
+                            "imageId": "newg.png",
+                            "description": "Gourmet"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Rxawards/_CATEGORY-Desserts.png"
+                                    }
+                                },
+                                {
+                                    "attributes": {
+                                        "description": "Gourmet",
+                                        "imageId": "newg.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "₹100 OFF",
+                    "subHeader": "ABOVE ₹199",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/cheesecake-and-co-vicky-complex-sector-15-fbd-rest738769",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "596129",
+                "name": "Chinese Wok",
+                "cloudinaryImageId": "e0839ff574213e6f35b3899ebf1fc597",
+                "locality": "Greenfield Colony",
+                "areaName": "Sector 43",
+                "costForTwo": "₹250 for two",
+                "cuisines": [
+                    "Chinese",
+                    "Asian",
+                    "Tibetan",
+                    "Desserts"
+                ],
+                "avgRating": 4.2,
+                "parentId": "61955",
+                "avgRatingString": "4.2",
+                "totalRatingsString": "1.9K+",
+                "sla": {
+                    "deliveryTime": 38,
+                    "lastMileTravel": 3.6,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "3.6 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Rxawards/_CATEGORY-Chinese.png",
+                            "description": "Delivery!"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Rxawards/_CATEGORY-Chinese.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "50% OFF",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/chinese-wok-greenfield-colony-sector-43-rest596129",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "462153",
+                "name": "Bakingo",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/2/c3cca213-8f49-404f-8d5e-c1c4035c99b0_462153.JPG",
+                "locality": "Sher Shah Suri Road",
+                "areaName": "Sector 37",
+                "costForTwo": "₹300 for two",
+                "cuisines": [
+                    "Bakery",
+                    "Desserts",
+                    "Beverages",
+                    "Snacks"
+                ],
+                "avgRating": 4.6,
+                "parentId": "3818",
+                "avgRatingString": "4.6",
+                "totalRatingsString": "4.1K+",
+                "sla": {
+                    "deliveryTime": 38,
+                    "lastMileTravel": 3.8,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "3.8 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Rxawards/_CATEGORY-Desserts.png",
+                            "description": "Delivery!"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Rxawards/_CATEGORY-Desserts.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "60% OFF",
+                    "subHeader": "UPTO ₹120"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/bakingo-sher-shah-suri-road-sector-37-rest462153",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "45177",
+                "name": "Burger King",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/18/baee7763-1bf0-4d8a-9a77-1b1f81fe5419_45177.jpg",
+                "locality": "Crown Interiorz Mall",
+                "areaName": "Sector 35",
+                "costForTwo": "₹350 for two",
+                "cuisines": [
+                    "Burgers",
+                    "American"
+                ],
+                "avgRating": 4.3,
+                "parentId": "166",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "26K+",
+                "sla": {
+                    "deliveryTime": 39,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 04:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Rxawards/_CATEGORY-Burger.png",
+                            "description": "Delivery!"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Rxawards/_CATEGORY-Burger.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹49"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/burger-king-crown-interiorz-mall-sector-35-rest45177",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "39265",
+                "name": "KFC",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/8/eab9bbd0-3746-4acf-9f0f-c272cf6b3b0f_39265.JPG",
+                "locality": "Crown Interiorz Mall",
+                "areaName": "Sector 35",
+                "costForTwo": "₹450 for two",
+                "cuisines": [
+                    "Burgers",
+                    "Fast Food",
+                    "Rolls & Wraps"
+                ],
+                "avgRating": 4,
+                "parentId": "547",
+                "avgRatingString": "4.0",
+                "totalRatingsString": "8.8K+",
+                "sla": {
+                    "deliveryTime": 39,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 01:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "Rxawards/_CATEGORY-Burger.png",
+                            "description": "Delivery!"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Delivery!",
+                                        "imageId": "Rxawards/_CATEGORY-Burger.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "50% OFF",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/kfc-crown-interiorz-mall-sector-35-rest39265",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "595192",
+                "name": "Big Bowl",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/22/deff0d02-ca1d-4ef9-9d62-b0cbeabf33d3_595192.JPG",
+                "locality": "Sector B",
+                "areaName": "Sector 43",
+                "costForTwo": "₹250 for two",
+                "cuisines": [
+                    "Chinese",
+                    "Tibetan",
+                    "Desserts"
+                ],
+                "avgRating": 4.2,
+                "parentId": "434792",
+                "avgRatingString": "4.2",
+                "totalRatingsString": "944",
+                "sla": {
+                    "deliveryTime": 41,
+                    "lastMileTravel": 3.6,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "40-45 mins",
+                    "lastMileTravelString": "3.6 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "50% OFF",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/big-bowl-sector-b-sector-43-rest595192",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "23119",
+                "name": "Pizza Hut",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/b67dc6e4-7a83-4ef5-b770-089d7f561b5b_23119.JPG",
+                "locality": "Sector 35",
+                "areaName": "Sector 35",
+                "costForTwo": "₹350 for two",
+                "cuisines": [
+                    "Pizzas"
+                ],
+                "avgRating": 4.1,
+                "parentId": "721",
+                "avgRatingString": "4.1",
+                "totalRatingsString": "5.9K+",
+                "sla": {
+                    "deliveryTime": 47,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "45-50 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 00:45:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹59"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "4.0",
+                        "ratingCount": "718"
+                    },
+                    "source": "GOOGLE",
+                    "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/pizza-hut-sector-35-rest23119",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "733025",
+                "name": "The Belgian Waffle Co.",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/16/db6d45fd-c2dd-49c0-b0c8-1b0abe984ad3_733025.jpg",
+                "locality": "ASHOKA ENCLAVE",
+                "areaName": "CROWN INTERIOR MALL",
+                "costForTwo": "₹200 for two",
+                "cuisines": [
+                    "Waffle",
+                    "Desserts",
+                    "Ice Cream"
+                ],
+                "avgRating": 4.6,
+                "veg": true,
+                "parentId": "2233",
+                "avgRatingString": "4.6",
+                "totalRatingsString": "717",
+                "sla": {
+                    "deliveryTime": 40,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "35-40 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 03:00:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "v1695133679/badges/Pure_Veg111.png",
+                            "description": "pureveg"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "pureveg",
+                                        "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "20% OFF",
+                    "subHeader": "UPTO ₹50"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/the-belgian-waffle-co-ashoka-enclave-crown-interior-mall-rest733025",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "736173",
+                "name": "Olio - The Wood Fired Pizzeria",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/24/67f05e69-3c6d-4b72-8c7f-e1d8e8d614f1_736173.JPG",
+                "locality": "Neelam Bata Chowk",
+                "areaName": "Sector 31",
+                "costForTwo": "₹300 for two",
+                "cuisines": [
+                    "Pizzas",
+                    "Pastas",
+                    "Italian",
+                    "Fast Food",
+                    "Snacks",
+                    "Beverages",
+                    "Desserts"
+                ],
+                "avgRating": 4.3,
+                "parentId": "11633",
+                "avgRatingString": "4.3",
+                "totalRatingsString": "2.0K+",
+                "sla": {
+                    "deliveryTime": 40,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "40-45 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 05:30:00",
+                    "opened": true
+                },
+                "badges": {
+                    "imageBadges": [
+                        {
+                            "imageId": "newg.png",
+                            "description": "Gourmet"
+                        }
+                    ]
+                },
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {
+                            "badgeObject": [
+                                {
+                                    "attributes": {
+                                        "description": "Gourmet",
+                                        "imageId": "newg.png"
+                                    }
+                                }
+                            ]
+                        },
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "50% OFF",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/olio-the-wood-fired-pizzeria-neelam-bata-chowk-sector-31-rest736173",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "622926",
+                "name": "CakeZone Patisserie",
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/3/77f49aff-13f7-4a5c-97ad-6dae89d0ab4f_622926.JPG",
+                "locality": "Sector 31",
+                "areaName": "Inder Colony",
+                "costForTwo": "₹200 for two",
+                "cuisines": [
+                    "Bakery",
+                    "Desserts",
+                    "Sweets",
+                    "Ice Cream"
+                ],
+                "avgRating": 4.4,
+                "parentId": "7003",
+                "avgRatingString": "4.4",
+                "totalRatingsString": "1.5K+",
+                "sla": {
+                    "deliveryTime": 42,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "40-50 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 01:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "50% OFF",
+                    "discountTag": "FLAT DEAL"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "--"
+                    }
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/cakezone-patisserie-sector-31-inder-colony-rest622926",
+                "type": "WEBLINK"
+            }
+        },
+        {
+            "info": {
+                "id": "302692",
+                "name": "Barbeque Nation",
+                "cloudinaryImageId": "t492oc9ildacaibob0lm",
+                "locality": "Sector 35",
+                "areaName": "Sector 35",
+                "costForTwo": "₹600 for two",
+                "cuisines": [
+                    "North Indian",
+                    "Barbecue",
+                    "Kebabs",
+                    "Biryani",
+                    "Street Food",
+                    "Snacks"
+                ],
+                "avgRating": 3.8,
+                "parentId": "2438",
+                "avgRatingString": "3.8",
+                "totalRatingsString": "1.3K+",
+                "sla": {
+                    "deliveryTime": 43,
+                    "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "40-45 mins",
+                    "lastMileTravelString": "3.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2026-01-25 01:00:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "imageBased": {},
+                        "textBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "aggregatedDiscountInfoV3": {
+                    "header": "ITEMS",
+                    "subHeader": "AT ₹74"
+                },
+                "loyaltyDiscoverPresentationInfo": {
+                    "logoCtx": {
+                        "text": "BENEFITS",
+                        "logo": "v1634558776/swiggy_one/OneLogo_3x.png"
+                    },
+                    "freedelMessage": "FREE DELIVERY"
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "4.3",
+                        "ratingCount": "6.1K+"
+                    },
+                    "source": "GOOGLE",
+                    "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+                "context": "seo-data-696aa270-6572-497a-8adc-6b89fe9eb35b"
+            },
+            "cta": {
+                "link": "https://www.swiggy.com/city/faridabad/barbeque-nation-sector-35-rest302692",
+                "type": "WEBLINK"
+            }
+        }
+    ]
+}

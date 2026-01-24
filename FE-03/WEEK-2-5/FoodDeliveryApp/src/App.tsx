@@ -1,6 +1,7 @@
-import Header from './Components/Header';
-import Body from './Components/Body';
-// import './App.css';
+import Header from './Components/Header/Header';
+import Body from './Components/Body/Body';
+import './App.css';
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
@@ -8,8 +9,9 @@ function App() {
     <>
       <Header />
       <Body />
+      <Footer />
     </>
-  )
+  );
 };
 
-export default App
+export default App;
