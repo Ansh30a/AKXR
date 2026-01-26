@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
-import resData from '../RestaurantData.json';
+import resData from '../../utils/RestaurantData.json';
 import './Body.css';
 
 interface RestaurantInfo {
