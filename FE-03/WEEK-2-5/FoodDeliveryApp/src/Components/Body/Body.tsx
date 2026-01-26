@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import resData from '../../utils/RestaurantData.json';
 import './Body.css';
@@ -29,6 +29,16 @@ const Body = () => {
     const initialData = resData as RestaurantData;
 
     const [restaurants, setRestaurants] = useState<Restaurant[]>(initialData.restaurants);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await fetch(import.meta.env.VITE_SWIGGY_API);
+            const json = await data.json();
+            setRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <div className="body">
