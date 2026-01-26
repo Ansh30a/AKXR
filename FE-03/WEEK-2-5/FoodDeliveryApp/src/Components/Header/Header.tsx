@@ -1,3 +1,4 @@
+import Login from '../Login/Login';
 import './Header.css';
 
 const Header = () => {
@@ -14,6 +15,7 @@ const Header = () => {
             <li>
                 <img src="/cart.svg" alt="Cart" />
             </li>
+            <Login />
         </ul>
       </div>
     </div>

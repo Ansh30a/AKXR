@@ -29,23 +29,24 @@ const Body = () => {
 
     const initialData = resData as RestaurantData;
 
-    const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+    // const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+    const [restaurants, setRestaurants] = useState<Restaurant[]>(initialData.restaurants);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await fetch(import.meta.env.VITE_SWIGGY_API);
-            const json = await data.json();
-            setRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const data = await fetch(import.meta.env.VITE_SWIGGY_API);
+    //         const json = await data.json();
+    //         setRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
-    if (restaurants.length === 0) {
-        return <Shimmer />
-    }
+    // if (restaurants.length === 0) {
+    //     return <Shimmer />
+    // }
 
-    return (
+    return restaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
             <div className="search-bar">
                 <input type="text" placeholder="Search.." className="search-input" />

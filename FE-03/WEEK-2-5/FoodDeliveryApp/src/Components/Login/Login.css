@@ -1,0 +1,25 @@
+.btn {
+    margin-top: 0.5em;
+    /* margin-bottom: 4em; */
+    padding: 0px;
+    margin-right: 2em;
+    margin-left: 2em;
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+    width: 7em;
+    height: 3em;
+    background-color: black; /* Green background */
+    border: none;             /* Remove default border */
+    color: #ffffff;             /* White text */
+    padding: 10px 16px;       /* Spacing inside the button */
+    text-align: center;       /* Center the text */
+    text-decoration: none;    /* Remove underline */
+    display: inline-block;    /* Allows setting width/height and other properties */
+    font-size: 16px;          /* Increase font size */
+    cursor: pointer;          /* Change mouse cursor on hover */
+    border-radius: 10px;       /* Rounded corners */
+    transition-duration: 0.4s; /* Smooth transition for hover effects */
+}
+
+.btn:hover {
+    scale: 1.1;
+}
