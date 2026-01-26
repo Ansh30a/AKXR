@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src="../../public/logo.svg" alt="" />
+        <img className="logo" src="/logo.svg" alt="Logo" />
       </div>
       <div className="nav-items">
         <ul>
@@ -12,7 +12,7 @@ const Header = () => {
             <li>About</li>
             <li>Contact</li>
             <li>
-                <img src="../../public/cart.svg" alt="" />
+                <img src="/cart.svg" alt="Cart" />
             </li>
         </ul>
       </div>
