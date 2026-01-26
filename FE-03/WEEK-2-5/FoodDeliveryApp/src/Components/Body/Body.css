@@ -23,6 +23,28 @@
     border: 2px solid white; 
 }
 
+.filter-btn {
+    margin-top: 1em;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff; /* Green background */
+    border: none;             /* Remove default border */
+    color: rgb(141, 140, 140);             /* White text */
+    padding: 10px 16px;       /* Spacing inside the button */
+    text-align: center;       /* Center the text */
+    text-decoration: none;    /* Remove underline */
+    display: inline-block;    /* Allows setting width/height and other properties */
+    font-size: 16px;          /* Increase font size */
+    cursor: pointer;          /* Change mouse cursor on hover */
+    border-radius: 10px;       /* Rounded corners */
+    transition-duration: 0.4s; /* Smooth transition for hover effects */
+}
+
+.filter-btn:hover {
+    scale: 1.1;
+    background-color: black;
+    color: white;
+}
+
 .restaurant-container {
     display: flex;
     flex-wrap: wrap;
