@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import resData from '../../utils/RestaurantData.json';
+import Shimmer from "../Shimmer/Shimmer";
 import './Body.css';
 
 interface RestaurantInfo {
@@ -28,7 +29,7 @@ const Body = () => {
 
     const initialData = resData as RestaurantData;
 
-    const [restaurants, setRestaurants] = useState<Restaurant[]>(initialData.restaurants);
+    const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,6 +40,10 @@ const Body = () => {
 
         fetchData();
     }, []);
+
+    if (restaurants.length === 0) {
+        return <Shimmer />
+    }
 
     return (
         <div className="body">
