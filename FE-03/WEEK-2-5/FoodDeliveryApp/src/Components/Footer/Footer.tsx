@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="col-span-2 lg:col-span-2 lg:pr-8">
             <img
               className="h-9 w-auto"
-              src="../../../images/logo.svg"
+              src="../../../public/logo.svg"
               alt="Logo"
               style={{ scale: 3, margin: "20px", bottom: "20px" }}
             />
