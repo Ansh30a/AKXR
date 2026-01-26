@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+// import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import resData from '../../utils/RestaurantData.json';
 import Shimmer from "../Shimmer/Shimmer";
