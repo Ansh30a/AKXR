@@ -9,7 +9,11 @@ const Login = () => {
         <button 
             className="btn" 
             onClick={() => {
-                setBtnName("Log Out")
+                if (btnName === "Login") {
+                    setBtnName("Log out");
+                } else {
+                    setBtnName("Login");
+                }
             }}
         >
             {btnName}

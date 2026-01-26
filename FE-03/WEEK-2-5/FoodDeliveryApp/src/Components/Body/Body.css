@@ -5,11 +5,28 @@
 }
 
 .search-bar {
-    padding: 1em;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+
+    padding: 0.6em 1em;
     margin-top: 1em;
-    border-radius: 50px;
     width: 25%;
+
+
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.search-bar > button {
+    cursor: pointer;
+}
+
+.search-bar > button::before {
+    content: "|";
+    margin-right: 4px;
 }
 
 .search-input {
