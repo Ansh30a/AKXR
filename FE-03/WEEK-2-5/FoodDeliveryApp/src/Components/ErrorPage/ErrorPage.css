@@ -1,0 +1,15 @@
+.error-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container > h1 {
+    font-size: 6em;
+
+}
+
+.error-container > h2 {
+    font-size: 5em;
+}
