@@ -6,7 +6,8 @@ import Body from './Components/Body/Body';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
-import './index.css';
+import RestaurantMenuPage from './Components/RestaurantMenuPage/RestaurantMenuPage';
+import './index.css'; 
 
 const appRouter = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const appRouter = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/restaurants/:resId',
+                element: <RestaurantMenuPage />
             }
         ],
         errorElement: <ErrorPage />,
