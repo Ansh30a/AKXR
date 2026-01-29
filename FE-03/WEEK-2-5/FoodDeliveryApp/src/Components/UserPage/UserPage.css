@@ -1,0 +1,53 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0rem;
+    margin-bottom: 1em;
+}
+
+.user-card {
+    border-radius: 10px;
+    margin-top: 2em;
+    width: 20em;
+    height: 27.5em;
+    margin-left: 1em;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;  */
+    
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background-color: black;
+    color: white;
+}
+
+.user-card > img {
+    width: 150px;         
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+    border-color: white;
+    border-width: 2px;
+}
+
+.user-card > h1,
+.user-card > h2 {
+    top: 2rem;
+    margin: 0.5rem 1rem;
+    margin-left: 35px;
+    text-underline-position: below;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
