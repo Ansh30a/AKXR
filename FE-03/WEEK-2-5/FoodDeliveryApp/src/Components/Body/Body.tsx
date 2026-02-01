@@ -87,6 +87,7 @@ const Body = () => {
                 {restaurants.map((restaurant) => (
                     <RestaurantCard
                         key={restaurant.info.id}
+                        id={restaurant.info.id}
                         name={restaurant.info.name}
                         cuisine={restaurant.info.cuisines}
                         rating={restaurant.info.avgRating}

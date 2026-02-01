@@ -30,3 +30,18 @@
     margin: 0.5rem 1rem;
     margin-left: 35px;
 }
+
+.restaurant-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.restaurant-card {
+    /* your existing styles */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);
+}
