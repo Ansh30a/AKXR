@@ -58,6 +58,17 @@ interface MenuResponse {
     };
 }
 
+interface RegularMenuWrapper {
+    groupedCard?: {
+        cardGroupMap?: {
+            REGULAR?: {
+                cards?: MenuCard[];
+            };
+        };
+    };
+}
+
+
 const RestaurantMenuPage = () => {
     const { resId } = useParams<{ resId: string }>();
     const [resInfo, setResInfo] = useState<MenuResponse | null>(null);
@@ -74,11 +85,11 @@ const RestaurantMenuPage = () => {
         return <Shimmer />;
     }
 
-    const isRestaurantCard = (
-        card: RestaurantCard | MenuCard,
-    ): card is RestaurantCard => {
-        return "info" in card.card.card;
-    };
+    // const isRestaurantCard = (
+    //     card: RestaurantCard | MenuCard,
+    // ): card is RestaurantCard => {
+    //     return "info" in card.card.card;
+    // };
 
     const restaurantCard = resInfo.data.cards[2] as RestaurantCard;
     const restaurantInfo = restaurantCard.card.card.info;
@@ -88,9 +99,9 @@ const RestaurantMenuPage = () => {
     const rating = restaurantInfo.avgRating;
     const deliveryTime = restaurantInfo.sla.deliveryTime;
 
-    const menuCards =
-        ((resInfo.data.cards[4] as any)?.groupedCard?.cardGroupMap?.REGULAR
-            ?.cards as MenuCard[]) || [];
+    const regularMenuCard = resInfo.data.cards[4] as RegularMenuWrapper;
+
+    const menuCards = regularMenuCard?.groupedCard?.cardGroupMap?.REGULAR?.cards ?? [];
 
     return (
         <div className="restaurant-menu">
