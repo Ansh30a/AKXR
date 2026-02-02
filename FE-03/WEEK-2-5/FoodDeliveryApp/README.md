@@ -14,6 +14,7 @@ A modern, feature-rich food delivery application built with React, TypeScript, a
 - [Key Concepts Implemented](#key-concepts-implemented)
 - [Custom Hooks](#custom-hooks)
 - [Routing](#routing)
+- [Future Enhancements](#future-enhancements)
 - [Learning Outcomes](#learning-outcomes)
 
 ## 🎯 About
@@ -35,10 +36,13 @@ Savory Drop is a Swiggy-inspired food delivery application that allows users to 
 
 ## 🛠️ Tech Stack
 
+### Build Tools & Runtime
+- **Bun** - Fast all-in-one JavaScript runtime and package manager
+- **Vite 7.2.4** - Lightning-fast build tool and development server
+
 ### Core Technologies
 - **React 19.2.0** - UI library
 - **TypeScript** - Type safety and better developer experience
-- **Vite 7.2.4** - Fast build tool and development server
 - **React Router DOM 7.13.0** - Client-side routing
 
 ### Styling
@@ -89,8 +93,9 @@ FoodDeliveryApp/
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
-- npm or yarn package manager
+- **Bun** (v1.0 or higher) - Fast JavaScript runtime and package manager
+  - Install from [bun.sh](https://bun.sh)
+- **Vite** - Already included as dev dependency
 
 ### Installation
 
@@ -102,7 +107,7 @@ FoodDeliveryApp/
 
 2. **Install dependencies**
    ```bash
-   npm install
+   bun install
    ```
 
 3. **Set up environment variables**
@@ -115,7 +120,7 @@ FoodDeliveryApp/
 
 4. **Start the development server**
    ```bash
-   npm run dev
+   bun run dev
    ```
 
 5. **Open your browser**
@@ -125,10 +130,10 @@ FoodDeliveryApp/
 ### Available Scripts
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run preview  # Preview production build
-npm run lint     # Run ESLint
+bun run dev      # Start Vite development server
+bun run build    # Build for production with TypeScript check
+bun run preview  # Preview production build
+bun run lint     # Run ESLint
 ```
 
 ## 💡 Key Concepts Implemented
@@ -274,7 +279,6 @@ interface RestaurantCardProps {
 
 3. **Search Reset**: No clear/reset button for search
 
-
 ## 📚 Learning Outcomes
 
 By building this project, you'll learn:
@@ -303,6 +307,7 @@ By building this project, you'll learn:
    - Optimistic UI updates
 
 5. **Modern Development**
+   - Bun runtime and package manager
    - Vite build tool
    - ESLint configuration
    - Module bundling
@@ -374,6 +379,7 @@ Created as a learning project to understand React, TypeScript, and modern web de
 
 ## 🙏 Acknowledgments
 
+- Bun documentation
 - React documentation
 - TypeScript documentation
 - Vite documentation
