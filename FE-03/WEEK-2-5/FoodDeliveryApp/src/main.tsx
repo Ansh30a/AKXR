@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+import { lazy, StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
@@ -7,7 +7,11 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import RestaurantMenuPage from './Components/RestaurantMenuPage/RestaurantMenuPage';
+// import Grocery from './Components/Grocery/Grocery';
+import Shimmer from './Components/Shimmer/Shimmer';
 import './index.css'; 
+
+const Grocery = lazy(() => import('./Components/Grocery/Grocery'));
 
 const appRouter = createBrowserRouter([
     {
@@ -25,6 +29,10 @@ const appRouter = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/grocery',
+                element: <Suspense fallback={<Shimmer />}><Grocery /></Suspense>
             },
             {
                 path: '/restaurants/:resId',

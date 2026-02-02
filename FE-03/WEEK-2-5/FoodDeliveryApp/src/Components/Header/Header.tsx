@@ -24,6 +24,9 @@ const Header = () => {
                         <Link to="/contact">Contact</Link>
                     </li>
                     <li>
+                        <Link to="/grocery">Grocery</Link>
+                    </li>
+                    <li>
                         <img src="/cart.svg" alt="Cart" />
                     </li>
                     <Login />
