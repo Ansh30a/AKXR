@@ -3,6 +3,7 @@ import { useState } from "react";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import resData from '../../utils/RestaurantData.json';
 // import Shimmer from "../Shimmer/Shimmer";
+import useOnlineStatus  from "../../Hooks/useOnlineStatus";
 import './Body.css';
 
 interface RestaurantInfo {
@@ -48,6 +49,14 @@ const Body = () => {
     // if (restaurants.length === 0) {
     //     return <Shimmer />
     // }
+
+    const onlineStatus = useOnlineStatus();
+
+    if (onlineStatus === false) {
+        return (
+            <h1>You're Offline!!!</h1>
+        )
+    }
 
     return ( // ---- restaurants.length === 0 ? <Shimmer /> :
         <div className="body">
