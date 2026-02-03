@@ -21,10 +21,12 @@ const RestaurantCard = ({ id, name, cuisine, rating, eta, imageId }: RestaurantC
                 src={CLOUDINARY_BASE_URL + imageId}
                 alt={name}
             />
-            <h3>{name}</h3>
-            <h4>{cuisine.join(", ")}</h4>
-            <h4>⭐ {rating}</h4>
-            <h4>{eta}</h4>
+            <div className='left-3 ml-3'>
+                <h3 className="font-bold text-xl">{name}</h3>
+                <h4 className='font-semibold text-sm'>{cuisine.join(", ")}</h4>
+                <h4 className='flex items-center'><img src="/star.svg" alt="" className='w-8 p-2' />{rating}</h4>
+                <h4 className='flex items-center'><img src="/clock.svg" alt="" className='p-2' />{eta}</h4>
+            </div>
         </div>
     </Link>
   );
