@@ -15,7 +15,7 @@ const CLOUDINARY_BASE_URL = import.meta.env.VITE_CLOUDINARY_BASE_URL;
 const RestaurantCard = ({ id, name, cuisine, rating, eta, imageId }: RestaurantCardProps) => {
   return (
     <Link to={`/restaurants/${id}`} className="restaurant-card-link">
-        <div className="restaurant-card">
+        <div className="restaurant-card bg-amber-50">
             {/* <img src="https://images.pexels.com/photos/33428723/pexels-photo-33428723.jpeg" alt={name} /> */}
             <img
                 src={CLOUDINARY_BASE_URL + imageId}

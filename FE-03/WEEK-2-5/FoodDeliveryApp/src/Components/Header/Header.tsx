@@ -7,7 +7,7 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     return (
-        <div className="header">
+        <div className="header hover:bg-green-50">
             <div className="logo-container">
                 <img className="logo" src="/logo.svg" alt="Logo" />
             </div>
