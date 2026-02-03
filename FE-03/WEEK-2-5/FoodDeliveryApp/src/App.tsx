@@ -5,11 +5,13 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="app-shell">
       <Header />
-      <Outlet />
+      <main className="app-main">
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

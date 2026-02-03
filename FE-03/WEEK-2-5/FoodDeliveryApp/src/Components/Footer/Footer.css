@@ -1,0 +1,11 @@
+.Footer {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.Footer .footer-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+    margin: 8px 0 0;
+}

@@ -1,14 +1,16 @@
+import './Footer.css';
+
 const Footer = () => {
   return (
-    <section className="bg-gray-50 py-10 sm:pt-16 lg:pt-24">
+    <section className="Footer bg-gray-50 py-10 sm:pt-12 lg:pt-16 border-t border-gray-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-x-12 gap-y-16 md:grid-cols-3 lg:grid-cols-6">
           <div className="col-span-2 lg:col-span-2 lg:pr-8">
             <img
-              className="h-9 w-auto"
+              className="footer-logo"
               src="/logo.svg"
               alt="Logo"
-              style={{ scale: 3, margin: "20px", bottom: "20px" }}
+              style={{ scale: 2}}
             />
 
             {/* <p className="mt-7 text-base leading-relaxed text-gray-600">
