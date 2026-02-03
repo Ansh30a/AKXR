@@ -1,42 +1,87 @@
-/* @import url('https://fonts.googleapis.com'); */
-
-/* * {
-    font-family: 'Poppins', sans-serif;
-} */
-
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     margin: 1em;
+    padding: 0.5em 1em;
 }
 
 .logo {
     width: 7.5em;
+    height: auto;
 }
 
 .nav-items > ul {
     display: flex;
     list-style-type: none;
-    margin-top: 0.5em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .nav-items > ul > li {
-    /* margin: 20px; */
-    padding: 20px;
-    padding-left: 100px;
-    margin-right: 10px;
-    right: 10px;
-    transition: 0.5s ease;
-    justify-content: space-between;
+    transition: transform 0.3s ease;
     font-size: 1.1em;
+    white-space: nowrap;
 }
 
 .nav-items > ul > li:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
+}
+
+.nav-items > ul > li > a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header > .nav-items > ul > li > img {
-    scale: 1.75;
+    width: 28px;
+    height: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-items > ul {
+        gap: 1rem;
+    }
+    
+    .nav-items > ul > li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1em;
+    }
+    
+    .logo {
+        width: 6em;
+    }
+    
+    .nav-items > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .nav-items > ul > li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-items > ul > li {
+        font-size: 0.85em;
+    }
+    
+    .header > .nav-items > ul > li > img {
+        width: 24px;
+        height: 24px;
+    }
 }

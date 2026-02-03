@@ -2,19 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
     gap: 0.5em;
-
-
     padding: 0.6em 1em;
     margin-top: 1em;
-    width: 25%;
-
-
+    width: min(90%, 400px);
+    max-width: 400px;
     border-radius: 50px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     background: white;
@@ -22,50 +20,86 @@
 
 .search-bar > button {
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #333;
 }
 
 .search-bar > button::before {
     content: "|";
-    margin-right: 4px;
+    margin-right: 8px;
+    color: #ccc;
 }
 
 .search-input {
     border: none;
-    outline: none;          
+    outline: none;
     width: 100%;
     font-size: 1rem;
 }
 
 .search-input:focus {
-    border: 2px solid white; 
+    outline: none;
 }
 
 .filter-btn {
     margin-top: 1em;
     margin-bottom: 1em;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    background-color: #ffffff; /* Green background */
-    border: none;             /* Remove default border */
-    color: rgb(141, 140, 140);             /* White text */
-    padding: 10px 16px;       /* Spacing inside the button */
-    text-align: center;       /* Center the text */
-    text-decoration: none;    /* Remove underline */
-    display: inline-block;    /* Allows setting width/height and other properties */
-    font-size: 16px;          /* Increase font size */
-    cursor: pointer;          /* Change mouse cursor on hover */
-    border-radius: 10px;       /* Rounded corners */
-    transition-duration: 0.4s; /* Smooth transition for hover effects */
+    background-color: #ffffff;
+    border: none;
+    color: rgb(141, 140, 140);
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .filter-btn:hover {
-    scale: 1.1;
+    transform: scale(1.05);
     background-color: black;
     color: white;
 }
 
 .restaurant-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0rem;
-    /* justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 95%;
+    }
+    
+    .restaurant-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .body {
+        padding: 0.5rem;
+    }
+    
+    .restaurant-container {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+    
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
 }
