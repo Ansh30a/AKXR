@@ -21,9 +21,9 @@ const RestaurantMenuPage = () => {
                 <h1>{name}</h1>
                 {/* <p className="restaurant-id">Restaurant ID: {resId}</p> */}
                 <p>{cuisines.join(", ")}</p>
-                <div className="restaurant-meta">
-                    <span>⭐ {avgRating}</span>
-                    <span>🕐 {sla.deliveryTime} mins</span>
+                <div className="restaurant-meta items-center">
+                    <span className="flex items-center"><img src="/star.svg" alt=""className="w-8 p-2" /> {avgRating}</span>
+                    <span className="flex items-center"><img src="/clock.svg" alt="" className="m-1" /> {sla.deliveryTime} mins</span>
                     <span>{costForTwoMessage}</span>
                 </div>
             </div>
