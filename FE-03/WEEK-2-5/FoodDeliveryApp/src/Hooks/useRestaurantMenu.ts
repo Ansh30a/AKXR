@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import MenuData from '../utils/MenuData.json';
+// import MenuData from '../utils/MenuData.json';
 
 interface ItemInfo {
     id: string;
@@ -74,13 +74,18 @@ const useRestaurantMenu = (resId?: string) => {
     useEffect(() => {
         if (!resId) return;
 
-        setTimeout(() => {
-            const data = MenuData as MenuResponse;
+        // setTimeout(() => {
+        const fetchData = async () => {
+            // const data = MenuData as MenuResponse;
 
-            const restaurantCard = data.data.cards[2] as RestaurantCard;
+            const data = await fetch(`${import.meta.env.VITE_AKXR_MENU_API}${resId}`);
+
+            const json = await data.json() as MenuResponse;
+
+            const restaurantCard = json?.data.cards[2] as RestaurantCard;
             const info = restaurantCard.card.card.info;
 
-            const regularMenuCard = data.data.cards[4] as RegularMenuWrapper;
+            const regularMenuCard = json?.data.cards[4] as RegularMenuWrapper;
 
             const menu =
                 regularMenuCard?.groupedCard?.cardGroupMap?.REGULAR?.cards ??
@@ -89,7 +94,10 @@ const useRestaurantMenu = (resId?: string) => {
             setRestaurantInfo(info);
             setMenuCards(menu);
             setLoading(false);
-        }, 500);
+        };
+
+        fetchData();
+
     }, [resId]);
 
     return { restaurantInfo, menuCards, loading };

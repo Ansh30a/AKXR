@@ -30,7 +30,7 @@ const RestaurantMenuPage = () => {
 
             <h2>Menu</h2>
             
-            <p className="menu-note"> Note: Currently showing sample menu data. In production, each restaurant would have its own menu. </p>
+            {/* <p className="menu-note"> Note: Currently showing sample menu data. In production, each restaurant would have its own menu. </p> */}
 
             <div className="menu-categories">
                 {menuCards.map((card: MenuCard, index: number) => {

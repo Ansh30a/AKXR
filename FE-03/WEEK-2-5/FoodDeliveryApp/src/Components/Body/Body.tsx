@@ -1,10 +1,10 @@
-import { useState } from "react";
-// import { useEffect, useState } from "react";
+// import { useState } from "react";
+import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import withOpenLabel from "../Label/OpenLabel";
 import resData from "../../utils/RestaurantData.json";
-// import Shimmer from "../Shimmer/Shimmer";
-import useOnlineStatus from "../../Hooks/useOnlineStatus";
+import Shimmer from "../Shimmer/Shimmer";
+// import useOnlineStatus from "../../Hooks/useOnlineStatus";
 import "./Body.css";
 
 interface RestaurantInfo {
@@ -30,34 +30,35 @@ interface RestaurantData {
 const Body = () => {
     const initialData = resData as RestaurantData;
 
-    // const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
-    const [restaurants, setRestaurants] = useState<Restaurant[]>(
-        initialData.restaurants,
-    );
+    const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+    // const [restaurants, setRestaurants] = useState<Restaurant[]>(
+    //     initialData.restaurants,
+    // );
 
     const [searchBarText, setSearchBarText] = useState("");
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const data = await fetch(import.meta.env.VITE_SWIGGY_API);
-    //         const json = await data.json();
-    //         setRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-    //     };
+    useEffect(() => {
+        const fetchData = async () => {
+            // const data = await fetch(import.meta.env.VITE_SWIGGY_API);
+            const data = await fetch(import.meta.env.VITE_AKXR_SWIGGY_API);
+            const json = await data.json();
+            setRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        };
 
-    //     fetchData();
-    // }, []);
+        fetchData();
+    }, []);
 
-    // if (restaurants.length === 0) {
-    //     return <Shimmer />
-    // }
+    if (restaurants.length === 0) {
+        return <Shimmer />
+    }
 
     const RestaurantCardOpen = withOpenLabel(RestaurantCard);
 
-    const onlineStatus = useOnlineStatus();
+    // const onlineStatus = useOnlineStatus();
 
-    if (onlineStatus === false) {
-        return <h1>You're Offline!!!</h1>;
-    }
+    // if (onlineStatus === false) {
+    //     return <h1>You're Offline!!!</h1>;
+    // }
 
     return (
         // ---- restaurants.length === 0 ? <Shimmer /> :
