@@ -13,14 +13,13 @@ const RestaurantMenuPage = () => {
         return <Shimmer />;
     }
 
-    const { name, cuisines, avgRating, costForTwoMessage, sla } =
-        restaurantInfo;
+    const { name, cuisines, avgRating, costForTwoMessage, sla } = restaurantInfo;
 
     return (
         <div className="restaurant-menu">
             <div className="restaurant-header">
                 <h1>{name}</h1>
-                <p className="restaurant-id">Restaurant ID: {resId}</p>
+                {/* <p className="restaurant-id">Restaurant ID: {resId}</p> */}
                 <p>{cuisines.join(", ")}</p>
                 <div className="restaurant-meta">
                     <span>⭐ {avgRating}</span>
@@ -56,7 +55,7 @@ const RestaurantMenuPage = () => {
                                                 key={itemIndex}
                                                 className="menu-item"
                                             >
-                                                <div className="item-details">
+                                                <div className="w-8/12 item-details">
                                                     <h4>{info.name}</h4>
                                                     <p className="item-price">
                                                         ₹
@@ -71,13 +70,16 @@ const RestaurantMenuPage = () => {
                                                     )}
                                                 </div>
 
-                                                {info.imageId && (
-                                                    <img
-                                                        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/${info.imageId}`}
-                                                        alt={info.name}
-                                                        className="item-image"
-                                                    />
-                                                )}
+                                                <div className="w-4/12 relative flex flex-col items-center">
+                                                    {info.imageId && (
+                                                        <img
+                                                            src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/${info.imageId}`}
+                                                            alt={info.name}
+                                                            className="rounded-lg"
+                                                        />
+                                                    )}
+                                                    <button className="absolute -bottom-4 mb-1 px-7 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl shadow-lg text-center hover:bg-green-800 transition">Add+</button>
+                                                </div>
                                             </div>
                                         );
                                     },
