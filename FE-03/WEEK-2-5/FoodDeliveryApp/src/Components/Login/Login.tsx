@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import UserContext from "../../Context/userContext";
 import "./Login.css";
 
 const Login = () => {
 
     const [btnName, setBtnName] = useState("Login");
+
+    const { loggedInUser } = useContext(UserContext);
+
+    // console.log(loggedInUser);   
 
     /*
     1. If there is no dependency array then useEffect gets called after every render
@@ -13,10 +18,10 @@ const Login = () => {
 
     return (
         <button 
-            className="btn" 
+            className="btn text-xs w-1" 
             onClick={() => {
                 if (btnName === "Login") {
-                    setBtnName("Log out");
+                    setBtnName(`${loggedInUser}`);
                 } else {
                     setBtnName("Login");
                 }
