@@ -5,7 +5,7 @@ interface User {
     username: string;
     avatar_url: string;
     github_link: string;
-};
+}
 
 const UserPage = ({ name, username, avatar_url, github_link }: User) => {
 

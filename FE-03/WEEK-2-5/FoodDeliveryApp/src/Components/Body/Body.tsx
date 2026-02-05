@@ -7,28 +7,40 @@ import Shimmer from "../Shimmer/Shimmer";
 // import useOnlineStatus from "../../Hooks/useOnlineStatus";
 import "./Body.css";
 
-interface RestaurantInfo {
-    id: string;
-    name: string;
-    cuisines: string[];
-    avgRating: number;
-    sla: {
-        slaString: string;
-    };
-    cloudinaryImageId: string;
-    isOpen: boolean;
-}
+// interface RestaurantInfo {
+//     id: string;
+//     name: string;
+//     cuisines: string[];
+//     avgRating: number;
+//     sla: {
+//         slaString: string;
+//     };
+//     cloudinaryImageId: string;
+//     isOpen: boolean;
+// }
+
+// interface Restaurant {
+//     info: RestaurantInfo;
+// }
+
+// interface RestaurantData {
+//     restaurants: Restaurant[];
+// }
 
 interface Restaurant {
-    info: RestaurantInfo;
-}
-
-interface RestaurantData {
-    restaurants: Restaurant[];
+    info: {
+        id: string;
+        name: string;
+        cuisines: string[];
+        avgRating: number;
+        sla: { slaString: string };
+        cloudinaryImageId: string;
+        isOpen: boolean;
+    };
 }
 
 const Body = () => {
-    const initialData = resData as RestaurantData;
+    const initialData = resData as { restaurants: Restaurant[] };
 
     const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
     // const [restaurants, setRestaurants] = useState<Restaurant[]>(
