@@ -12,3 +12,4 @@
 - Create a Slice (cartSlice)
 - Dispatch(Action)
 - Selector
+- Create Typed Hooks
