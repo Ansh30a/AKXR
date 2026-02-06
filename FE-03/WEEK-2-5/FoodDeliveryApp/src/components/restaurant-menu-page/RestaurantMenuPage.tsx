@@ -2,12 +2,26 @@ import { useParams } from "react-router-dom";
 import Shimmer from "../shimmer/Shimmer";
 import useRestaurantMenu from "../../hooks/useRestaurantMenu";
 import type { MenuCard } from "../../hooks/useRestaurantMenu";
+import { useDispatch } from "react-redux";
+import { addItem, removeItem } from "../../features/cartSlice";
 import "./RestaurantMenuPage.css";
 
 const RestaurantMenuPage = () => {
     const { resId } = useParams<{ resId: string }>();
 
     const { restaurantInfo, menuCards, loading } = useRestaurantMenu(resId);
+
+    const dispatch = useDispatch();
+
+    const handleAddItem = () => {
+        // Dispatch an action
+        dispatch(addItem({ id: '3', name: 'biryani', price: 500 }));
+    }
+
+    const handleRemoveItem = () => {
+        // Dispatch an action
+        dispatch(removeItem());
+    }
 
     if (loading || !restaurantInfo) {
         return <Shimmer />;
@@ -78,7 +92,20 @@ const RestaurantMenuPage = () => {
                                                             className="rounded-lg"
                                                         />
                                                     )}
-                                                    <button className="absolute -bottom-4 mb-1 px-7 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl shadow-lg text-center hover:bg-green-800 transition">Add+</button>
+                                                    <div className="flex flex-wrap gap-1">
+                                                        <button 
+                                                            className="-bottom-8 mb-1 px-7 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl shadow-lg text-center hover:bg-green-800 transition"
+                                                            onClick={handleAddItem}
+                                                        >
+                                                            +
+                                                        </button>
+                                                        <button 
+                                                            className="-bottom-4 mb-1 px-7 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl shadow-lg text-center hover:bg-green-800 transition"
+                                                            onClick={handleRemoveItem}
+                                                        >
+                                                            -
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         );
