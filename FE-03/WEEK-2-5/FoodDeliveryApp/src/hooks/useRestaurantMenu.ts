@@ -64,7 +64,7 @@ import { useEffect, useState } from "react";
 //     };
 // }
 
-interface MenuItem {
+export interface MenuItem {
     id: string;
     name: string;
     price?: number;

@@ -30,9 +30,11 @@ const Header = () => {
                     <li>
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="flex flex-wrap items-center">
-                        <img src="/cart.svg" alt="Cart" />
-                        <p className="w-4 px-4 justify-center items-center">{cartItems.length}</p>
+                    <li>
+                        <Link to="/cart" className="flex flex-wrap items-center">
+                            <img src="/cart.svg" alt="Cart" className="size-5.5"/>
+                            <p className="w-4 px-4 justify-center items-center">{cartItems.length}</p>
+                        </Link>
                     </li>
                     <Login />
                 </ul>

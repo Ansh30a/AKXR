@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import Shimmer from "../shimmer/Shimmer";
 import useRestaurantMenu from "../../hooks/useRestaurantMenu";
-import type { MenuCard } from "../../hooks/useRestaurantMenu";
-import { useDispatch } from "react-redux";
-import { addItem, removeItem } from "../../features/cartSlice";
+import type { MenuCard, MenuItem } from "../../hooks/useRestaurantMenu";
+import { addItem, removeItemById } from "../../features/cartSlice";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
 import "./RestaurantMenuPage.css";
 
 const RestaurantMenuPage = () => {
@@ -11,16 +11,23 @@ const RestaurantMenuPage = () => {
 
     const { restaurantInfo, menuCards, loading } = useRestaurantMenu(resId);
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
-    const handleAddItem = () => {
+    const handleAddItem = ({ id, name, price, defaultPrice, imageId }: MenuItem) => {
         // Dispatch an action
-        dispatch(addItem({ id: '3', name: 'biryani', price: 500 }));
+        dispatch(
+            addItem({ 
+                id: id, 
+                name: name, 
+                price: (price ?? defaultPrice ?? 0) / 100, 
+                imageId,
+            })
+        );
     }
 
-    const handleRemoveItem = () => {
+    const handleRemoveItem = (id: string) => {
         // Dispatch an action
-        dispatch(removeItem());
+        dispatch(removeItemById(id));
     }
 
     if (loading || !restaurantInfo) {
@@ -95,13 +102,20 @@ const RestaurantMenuPage = () => {
                                                     <div className="flex flex-wrap gap-1">
                                                         <button 
                                                             className="-bottom-8 mb-1 px-7 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl shadow-lg text-center hover:bg-green-800 transition"
-                                                            onClick={handleAddItem}
+                                                            onClick={() => 
+                                                                handleAddItem({
+                                                                    id: info.id,
+                                                                    name: info.name,
+                                                                    price: (info.price ?? info.defaultPrice ?? 0),
+                                                                    imageId: info.imageId,
+                                                                })
+                                                            }
                                                         >
                                                             +
                                                         </button>
                                                         <button 
                                                             className="-bottom-4 mb-1 px-7 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl shadow-lg text-center hover:bg-green-800 transition"
-                                                            onClick={handleRemoveItem}
+                                                            onClick={() => handleRemoveItem(info.id)}
                                                         >
                                                             -
                                                         </button>

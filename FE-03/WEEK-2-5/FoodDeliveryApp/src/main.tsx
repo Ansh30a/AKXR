@@ -10,6 +10,7 @@ import RestaurantMenuPage from './components/restaurant-menu-page/RestaurantMenu
 // import Grocery from './Components/Grocery/Grocery';
 import Shimmer from './components/shimmer/Shimmer';
 import './index.css'; 
+import Cart from './components/cart/Cart';
 
 const Grocery = lazy(() => import('./components/grocery/Grocery'));
 
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([
             {
                 path: '/grocery',
                 element: <Suspense fallback={<Shimmer />}><Grocery /></Suspense>
+            },
+            {
+                path: '/cart',
+                element: <Cart />
             },
             {
                 path: '/restaurants/:resId',
