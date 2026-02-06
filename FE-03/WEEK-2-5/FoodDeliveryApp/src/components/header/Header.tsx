@@ -1,10 +1,14 @@
 import Login from "../login/Login";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../hooks/useOnlineStatus";
+import { useAppSelector } from "../../hooks/useAppSelector";
 import "./Header.css";
 
 const Header = () => {
     const onlineStatus = useOnlineStatus();
+
+    // Subscribe to the store using the useSelector hook
+    const cartItems = useAppSelector((store) => store.cart.items)
 
     return (
         <div className="header hover:bg-green-50">
@@ -26,8 +30,9 @@ const Header = () => {
                     <li>
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li>
+                    <li className="flex flex-wrap items-center">
                         <img src="/cart.svg" alt="Cart" />
+                        <p className="w-4 px-4 justify-center items-center">{cartItems.length}</p>
                     </li>
                     <Login />
                 </ul>

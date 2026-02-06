@@ -1,24 +1,26 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import UserContext from "./context/userContext";
 import { Provider } from "react-redux";
-import appStore from "./Store/appStore";
+import appStore from "./store/appStore";
 import "./App.css";
 
 function App() {
-    const [userName, setUserName] = useState("");
+    // const [userName, setUserName] = useState("");
 
     // Fake Auth
-    useEffect(() => {
-        // Make an ACTUAL API call here to fetch user data
-        const data = {
-            name: "Ansh",
-        };
+    // useEffect(() => {
+    //     // Make an ACTUAL API call here to fetch user data
+    //     const data = {
+    //         name: "Ansh",
+    //     };
         
-        setUserName(data.name);
-    }, []);
+    //     setUserName(data.name);
+    // }, []);
+    
+    const userName = "Ansh";
 
     return (
         <Provider store={ appStore }>
