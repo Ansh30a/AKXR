@@ -1,6 +1,6 @@
 import Login from "../Login/Login";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../../Hooks/useOnlineStatus";
+import useOnlineStatus from "../../hooks/useOnlineStatus";
 import "./Header.css";
 
 const Header = () => {

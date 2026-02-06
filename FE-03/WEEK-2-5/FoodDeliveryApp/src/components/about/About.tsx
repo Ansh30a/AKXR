@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import UserPage from "../UserPage/UserPage";
+import UserPage from "../user-page/UserPage";
 import "./About.css";
-import Shimmer from "../Shimmer/Shimmer";
+import Shimmer from "../shimmer/Shimmer";
 
 interface GitHubUser {
     name: string;

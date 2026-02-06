@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import withOpenLabel from "../Label/OpenLabel";
 import resData from "../../utils/RestaurantData.json";
-import Shimmer from "../Shimmer/Shimmer";
+import Shimmer from "../shimmer/Shimmer";
 // import useOnlineStatus from "../../Hooks/useOnlineStatus";
 import "./Body.css";
 

@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import { useEffect, useState } from "react";
-import UserContext from "./Context/userContext";
+import UserContext from "./context/userContext";
+import { Provider } from "react-redux";
+import appStore from "./Store/appStore";
 import "./App.css";
 
 function App() {
@@ -14,19 +16,22 @@ function App() {
         const data = {
             name: "Ansh",
         };
+        
         setUserName(data.name);
     }, []);
 
     return (
-        <UserContext.Provider value={{ loggedInUser: userName }}>
-            <div className="app-shell">
-                <Header />
-                <main className="app-main">
-                    <Outlet />
-                </main>
-                <Footer />
-            </div>
-        </UserContext.Provider>
+        <Provider store={ appStore }>
+            <UserContext.Provider value={{ loggedInUser: userName }}>
+                <div className="app-shell">
+                    <Header />
+                    <main className="app-main">
+                        <Outlet />
+                    </main>
+                    <Footer />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     );
 }
 

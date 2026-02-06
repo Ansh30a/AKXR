@@ -2,16 +2,16 @@ import { lazy, StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
-import Body from './Components/Body/Body';
-import About from './Components/About/About';
-import Contact from './Components/Contact/Contact';
-import ErrorPage from './Components/ErrorPage/ErrorPage';
-import RestaurantMenuPage from './Components/RestaurantMenuPage/RestaurantMenuPage';
+import Body from './components/body/Body';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import ErrorPage from './components/error-page/ErrorPage';
+import RestaurantMenuPage from './components/restaurant-menu-page/RestaurantMenuPage';
 // import Grocery from './Components/Grocery/Grocery';
-import Shimmer from './Components/Shimmer/Shimmer';
+import Shimmer from './components/shimmer/Shimmer';
 import './index.css'; 
 
-const Grocery = lazy(() => import('./Components/Grocery/Grocery'));
+const Grocery = lazy(() => import('./components/grocery/Grocery'));
 
 const appRouter = createBrowserRouter([
     {

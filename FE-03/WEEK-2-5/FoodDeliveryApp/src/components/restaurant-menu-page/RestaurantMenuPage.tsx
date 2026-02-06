@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import Shimmer from "../Shimmer/Shimmer";
-import useRestaurantMenu from "../../Hooks/useRestaurantMenu";
-import type { MenuCard } from "../../Hooks/useRestaurantMenu";
+import Shimmer from "../shimmer/Shimmer";
+import useRestaurantMenu from "../../hooks/useRestaurantMenu";
+import type { MenuCard } from "../../hooks/useRestaurantMenu";
 import "./RestaurantMenuPage.css";
 
 const RestaurantMenuPage = () => {
