@@ -1,4 +1,4 @@
-import Login from "../Login/Login";
+import Login from "../login/Login";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../hooks/useOnlineStatus";
 import "./Header.css";

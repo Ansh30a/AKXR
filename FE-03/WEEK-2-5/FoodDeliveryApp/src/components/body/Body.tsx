@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard/RestaurantCard";
-import withOpenLabel from "../Label/OpenLabel";
+import RestaurantCard from "./restaurant-card/RestaurantCard";
+import withOpenLabel from "../label/OpenLabel";
 import resData from "../../utils/RestaurantData.json";
 import Shimmer from "../shimmer/Shimmer";
 // import useOnlineStatus from "../../Hooks/useOnlineStatus";
