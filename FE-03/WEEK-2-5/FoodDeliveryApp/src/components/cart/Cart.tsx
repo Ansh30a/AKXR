@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../hooks/useAppSelector";
-import { useDispatch } from "react-redux"; 
-import { removeItemById } from "../../features/cartSlice";
+import { useDispatch } from "react-redux";
+import { clearCart, removeItemById } from "../../features/cartSlice";
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -11,9 +11,21 @@ const Cart = () => {
         <div className="flex justify-center mt-6">
             {/* Center container */}
             <div className="w-full max-w-3xl px-4">
-                <h1 className="text-2xl font-bold text-center mb-6">
-                    Your Cart
-                </h1>
+                <div className="font-semibold flex flex-wrap items-center text-lg gap-3 justify-center mb-3">
+                    <h1 className="text-2xl font-bold text-center">
+                        Your Cart
+                    </h1>
+                    <button
+                        onClick={() => dispatch(clearCart())}
+                        className="px-3 hover:scale-110 transition"
+                    >
+                        <img
+                            src="/trash.svg"
+                            alt="Remove item"
+                            className="w-5 h-5"
+                        />
+                    </button>
+                </div>
 
                 {cartItems.length === 0 ? (
                     <p className="text-center mt-4">Your cart is empty 🛒</p>
