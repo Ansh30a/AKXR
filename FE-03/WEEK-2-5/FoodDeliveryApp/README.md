@@ -85,6 +85,7 @@ FoodDeliveryApp/
 │   ├── App.tsx               # Root component
 │   ├── main.tsx              # Application entry point
 │   └── index.css             # Global styles
+├── tests/
 ├── package.json
 ├── tsconfig.json
 └── vite.config.ts
