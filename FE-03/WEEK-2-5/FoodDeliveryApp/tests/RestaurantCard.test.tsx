@@ -10,7 +10,7 @@ test("should render RestaurantCard with props data", () => {
             <RestaurantCard
                 key={1}
                 id={"1"}
-                name={"Pizza"}
+                name={"Pizza Hut"}
                 cuisine={["Pizza"]}
                 rating={4.5}
                 eta={"14 mins"}
