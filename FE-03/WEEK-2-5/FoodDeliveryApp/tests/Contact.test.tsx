@@ -12,3 +12,23 @@ test("renders contact", () => {
 
     expect(screen.getByText(/Contact/i)).toBeInTheDocument();
 });
+
+test("renders button inside contact", () => {
+    render(
+        <MemoryRouter>
+            <Contact />
+        </MemoryRouter>,
+    );
+
+    expect(screen.getByRole('button')).toBeInTheDocument();
+});
+
+test("renders button inside contact", () => {
+    render(
+        <MemoryRouter>
+            <Contact />
+        </MemoryRouter>,
+    );
+
+    expect(screen.getAllByRole('textbox').length).toBe(4);
+});
