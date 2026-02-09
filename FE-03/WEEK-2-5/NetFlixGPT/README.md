@@ -3,6 +3,13 @@
 ```bun create vite@latest app-name```
 - Configure tailwindcss \
 ```bun add -D tailwindcss @tailwindcss/vite```
+- Header
+- Body \
+```bun add react-router-do ```
+- Login
+- Sign In/Sign Up
+- Form Validation
+- useRef Hook
 
 ## Features
 - Login/Sign Up \

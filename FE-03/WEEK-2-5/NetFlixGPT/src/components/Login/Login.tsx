@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "../Header/Header";
+import checkValidData from "../../validators/validateForm";
 
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
 
+    const email = useRef<HTMLInputElement>(null);
+    const password = useRef<HTMLInputElement>(null);
+
     const toggleForm = () => {
         setIsSignIn(!isSignIn);
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        // Validate the form data
+        const emailValue = email.current?.value ?? "";
+        const passwordValue = password.current?.value ?? "";
+
+        checkValidData(emailValue, passwordValue);
     };
 
     return (
@@ -20,7 +34,10 @@ const Login = () => {
                 />
             </div>
             <div className="absolute inset-0 bg-linear-to-b from-neutral-950/90 via-neutral-900/80 to-neutral-950"></div>
-            <form className="bg-linear-to-b from-neutral-950/90 via-neutral-900/80 to-neutral-950 w-28/100 m-12 p-12 absolute mt-40 mb-40 mx-auto top-0 bottom-0 right-0 left-0 flex flex-col rounded-sm">
+            <form
+                onSubmit={handleSubmit}
+                className="bg-linear-to-b from-neutral-950/90 via-neutral-900/80 to-neutral-950 w-28/100 m-12 p-12 absolute mt-40 mb-40 mx-auto top-0 bottom-0 right-0 left-0 flex flex-col rounded-sm"
+            >
                 <h1 className="text-4xl font-semibold text-white mt-2 mb-5">
                     {isSignIn ? "Sign In" : "Sign Up"}
                 </h1>
@@ -28,20 +45,25 @@ const Login = () => {
                     <input
                         type="text"
                         placeholder="Name"
-                        className="m-2 p-3 bg-white rounded-sm"
+                        className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                     />
                 )}
                 <input
                     type="text"
                     placeholder="Email address"
-                    className="m-2 p-3 bg-white rounded-sm"
+                    ref={email}
+                    className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                 />
                 <input
                     type="text"
                     placeholder="Password"
-                    className="m-2 p-3 bg-white rounded-sm"
+                    ref={password}
+                    className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                 />
-                <button className="bg-red-600 p-3 m-2 rounded-sm text-white mt-10">
+                <button
+                    className="bg-red-600 p-3 m-2 rounded-sm text-white mt-10 cursor-pointer"
+                    type="submit"
+                >
                     {isSignIn ? "Sign In" : "Sign Up"}
                 </button>
                 <p
