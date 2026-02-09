@@ -5,6 +5,8 @@ import checkValidData from "../../validators/validateForm";
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
 
+    const [error, setError] = useState<string | null>(null);
+
     const email = useRef<HTMLInputElement>(null);
     const password = useRef<HTMLInputElement>(null);
 
@@ -12,14 +14,19 @@ const Login = () => {
         setIsSignIn(!isSignIn);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
 
         // Validate the form data
         const emailValue = email.current?.value ?? "";
         const passwordValue = password.current?.value ?? "";
 
-        checkValidData(emailValue, passwordValue);
+        const message = checkValidData(emailValue, passwordValue);
+        // if (message) console.log(message);
+        setError(message);
+
+        // Sign In/Sign Up
+        
     };
 
     return (
@@ -49,17 +56,18 @@ const Login = () => {
                     />
                 )}
                 <input
-                    type="text"
+                    type="email"
                     placeholder="Email address"
                     ref={email}
                     className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                 />
                 <input
-                    type="text"
+                    type="password"
                     placeholder="Password"
                     ref={password}
                     className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                 />
+                {error && <p className=" text-red-500 text-center rounded-sm p-2 m-2 flex flex-wrap gap-2 justify-center items-center"><img src="/cross.svg" alt="" className="w-3" />{error}</p>}
                 <button
                     className="bg-red-600 p-3 m-2 rounded-sm text-white mt-10 cursor-pointer"
                     type="submit"

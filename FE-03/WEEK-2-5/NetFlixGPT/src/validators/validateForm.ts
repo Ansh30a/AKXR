@@ -9,8 +9,8 @@ const checkValidData = (email: string, password: string) => {
             password,
         );
 
-    if (!isEmailValid) return `Email ID is not valid!!!`;
-    if (!isPasswordValid) return `Password is not valid!!!`;
+    if (!isEmailValid) return `Please enter a valid email address.`;
+    if (!isPasswordValid) return `Please enter a valid password.`;
 
     return null;
 };
