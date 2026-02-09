@@ -12,7 +12,7 @@ https://anshxr-netflixgpt.web.app
 - Form Validation
 - useRef Hook
 - Firebase setup
-- Deploy
+- Deploy the app
 
 ## Features
 - Login/Sign Up \
