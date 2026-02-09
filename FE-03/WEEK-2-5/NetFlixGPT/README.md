@@ -12,7 +12,7 @@
 - Form Validation
 - useRef Hook
 - Firebase setup
-- Deploy the app
+- Deploy the app on firebase
 
 ## Features
 - Login/Sign Up \
