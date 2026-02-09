@@ -1,4 +1,4 @@
-https://anshxr-netflixgpt.web.app
+## https://anshxr-netflixgpt.web.app
 # NetflixGPT
 - Bun + Vite Setup \
 ```bun create vite@latest app-name```
