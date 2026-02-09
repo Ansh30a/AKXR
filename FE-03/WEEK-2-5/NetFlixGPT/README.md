@@ -1,3 +1,4 @@
+https://anshxr-netflixgpt.web.app
 # NetflixGPT
 - Bun + Vite Setup \
 ```bun create vite@latest app-name```
@@ -10,6 +11,8 @@
 - Sign In/Sign Up
 - Form Validation
 - useRef Hook
+- Firebase setup
+- Deploy
 
 ## Features
 - Login/Sign Up \

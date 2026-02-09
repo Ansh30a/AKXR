@@ -1,6 +1,11 @@
 import { useRef, useState } from "react";
 import Header from "../Header/Header";
 import checkValidData from "../../validators/validateForm";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../../lib/firebase";
 
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
@@ -25,8 +30,32 @@ const Login = () => {
         // if (message) console.log(message);
         setError(message);
 
-        // Sign In/Sign Up
-        
+        if (message) {
+            return;
+        }
+
+        if (!isSignIn) {
+            // Sign Up
+            createUserWithEmailAndPassword(auth, emailValue, passwordValue)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log("Signed up:", user);
+                })
+                .catch((error) => {
+                    setError(error.message);
+                });
+        } else {
+            // Sign In
+            signInWithEmailAndPassword(auth, emailValue, passwordValue)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    console.log("Signed in:", user);
+                })
+                .catch((error) => {
+                    setError(error.message);
+                });
+        }
     };
 
     return (
@@ -67,7 +96,12 @@ const Login = () => {
                     ref={password}
                     className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                 />
-                {error && <p className=" text-red-500 text-center rounded-sm p-2 m-2 flex flex-wrap gap-2 justify-center items-center"><img src="/cross.svg" alt="" className="w-3" />{error}</p>}
+                {error && (
+                    <p className=" text-red-500 text-center rounded-sm p-2 m-2 flex flex-wrap gap-2 justify-center items-center">
+                        <img src="/cross.svg" alt="" className="w-3" />
+                        {error}
+                    </p>
+                )}
                 <button
                     className="bg-red-600 p-3 m-2 rounded-sm text-white mt-10 cursor-pointer"
                     type="submit"
