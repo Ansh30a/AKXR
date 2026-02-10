@@ -13,6 +13,9 @@
 - useRef Hook
 - Firebase setup
 - Deploy the app on firebase
+- Create SignUp logic
+- Create SingIn logic
+- Create Redux store with userSlice
 
 ## Features
 - Login/Sign Up \
