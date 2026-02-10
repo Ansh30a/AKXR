@@ -4,6 +4,7 @@ import checkValidData from "../../validators/validateForm";
 import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
+    updateProfile,
 } from "firebase/auth";
 import { auth } from "../../lib/firebase";
 
@@ -12,6 +13,7 @@ const Login = () => {
 
     const [error, setError] = useState<string | null>(null);
 
+    const name = useRef<HTMLInputElement>(null);
     const email = useRef<HTMLInputElement>(null);
     const password = useRef<HTMLInputElement>(null);
 
@@ -37,8 +39,17 @@ const Login = () => {
         if (!isSignIn) {
             // Sign Up
             createUserWithEmailAndPassword(auth, emailValue, passwordValue)
-                .then((userCredential) => {
+                .then(async (userCredential) => {
                     const user = userCredential.user;
+
+                    await updateProfile(user, {
+                        displayName: name.current?.value ?? "",
+                    });
+
+                    await user.reload();
+
+                    console.log("Signed up with name:", user.displayName);
+
                     console.log("Signed up:", user);
                 })
                 .catch((error) => {
@@ -81,6 +92,7 @@ const Login = () => {
                     <input
                         type="text"
                         placeholder="Name"
+                        ref={name}
                         className="m-2 p-3 bg-gray-800 text-gray-300 rounded-sm"
                     />
                 )}
