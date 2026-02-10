@@ -7,11 +7,15 @@ import {
     updateProfile,
 } from "firebase/auth";
 import { auth } from "../../lib/firebase";
+import { useAppDispatch } from "../../store/hooks";
+import { addUser } from "../../features/userSlice";
 
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
 
     const [error, setError] = useState<string | null>(null);
+
+    const dispatch = useAppDispatch();
 
     const name = useRef<HTMLInputElement>(null);
     const email = useRef<HTMLInputElement>(null);
@@ -42,12 +46,21 @@ const Login = () => {
                 .then(async (userCredential) => {
                     const user = userCredential.user;
 
+                    const displayName = name.current?.value ?? "";
+
                     await updateProfile(user, {
-                        displayName: name.current?.value ?? "",
+                        displayName
                     });
 
                     await user.reload();
 
+                    dispatch(
+                        addUser({
+                            uid: user.uid,
+                            email: user.email,
+                            displayName,
+                        }),
+                    );
                     console.log("Signed up with name:", user.displayName);
 
                     console.log("Signed up:", user);
