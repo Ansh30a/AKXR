@@ -16,6 +16,10 @@
 - Create SignUp logic
 - Create SingIn logic
 - Create Redux store with userSlice
+- Navigation iff authenticated
+- Implement sign out
+- Update profile
+- Fetch movies from OMDb
 
 ## Features
 - Login/Sign Up \
