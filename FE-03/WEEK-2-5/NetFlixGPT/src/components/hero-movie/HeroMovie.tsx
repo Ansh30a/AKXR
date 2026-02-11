@@ -8,7 +8,7 @@ interface HeroMovieProps {
 
 const HeroMovie = ({ movie }: HeroMovieProps) => {  
     return (
-        <div className="relative h-[90vh] w-full">
+        <div className="relative h-[80vh] w-full">
             <VideoBackground backdropPath={movie.backdrop_path ?? undefined} />
             <VideoTitle title={movie.title} overview={movie.overview} />
         </div>

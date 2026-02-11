@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import MovieRow from "../movie-row/MovieRow";
 import type { Movie } from "../../types/movie";
 import HeroMovie from "../hero-movie/HeroMovie";
-// import RecommendedMovieContainer from "../RecommendedMovieContainer/RecommendedMovieContainer";
 
 const Browse = () => {
     const [nowPlaying, setNowPlaying] = useState<Movie[]>([]);
