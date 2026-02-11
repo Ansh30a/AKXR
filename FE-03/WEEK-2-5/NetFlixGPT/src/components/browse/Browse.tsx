@@ -16,7 +16,7 @@ const Browse = () => {
     const [topRated, setTopRated] = useState<Movie[]>([]);
     const [upcoming, setUpcoming] = useState<Movie[]>([]);
 
-    const heroMovie = nowPlaying[0];
+    const heroMovie = nowPlaying[1];
 
     useEffect(() => {
         getNowPlayingMovies().then((data) =>

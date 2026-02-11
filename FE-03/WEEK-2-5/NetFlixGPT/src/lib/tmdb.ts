@@ -42,3 +42,7 @@ export const getTopRatedMovies = () => {
 export const getUpcomingMovies = () => {
     return fetchDataFromTMDB(`/movie/upcoming`);
 };
+
+export const getMovieVideos = (movieId: number) => {
+    return fetchDataFromTMDB(`/movie/${movieId}/videos`);
+};
