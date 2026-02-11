@@ -19,7 +19,7 @@
 - Navigation iff authenticated
 - Implement sign out
 - Update profile
-- Fetch movies from OMDb
+- Registre for API And Fetch movies from OMDb/TMDb
 
 ## Features
 - Login/Sign Up \
@@ -40,9 +40,3 @@
 - NetflixGPT \ (Authenticated User only)
     - Search Bar
     - Suggestions 
-
-- update 1 on 10 Feb 2026
-- update 2 on 10 Feb 2026
-- update 3 on 10 Feb 2026
-- update 4 on 10 Feb 2026
-- update 5 on 10 Feb 2026
