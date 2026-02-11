@@ -16,21 +16,25 @@ const Browse = () => {
     const [topRated, setTopRated] = useState<Movie[]>([]);
     const [upcoming, setUpcoming] = useState<Movie[]>([]);
 
-    const heroMovie = nowPlaying[1];
+    const [heroMovieIndex, setHeroMovieIndex] = useState(0);
 
     useEffect(() => {
-        getNowPlayingMovies().then((data) =>
-            setNowPlaying(data.results ?? [])
-        );
-        getPopularMovies().then((data) =>
-            setPopular(data.results ?? [])
-        );
-        getTopRatedMovies().then((data) =>
-            setTopRated(data.results ?? [])
-        );
-        getUpcomingMovies().then((data) =>
-            setUpcoming(data.results ?? [])
-        );
+        if (nowPlaying.length === 0) return;
+
+        const interval = setInterval(() => {
+            setHeroMovieIndex((prev) => prev + (1 % nowPlaying.length));
+        }, 11000);
+
+        return () => clearInterval(interval);
+    }, [nowPlaying]);
+
+    const heroMovie = nowPlaying[heroMovieIndex];
+
+    useEffect(() => {
+        getNowPlayingMovies().then((data) => setNowPlaying(data.results ?? []));
+        getPopularMovies().then((data) => setPopular(data.results ?? []));
+        getTopRatedMovies().then((data) => setTopRated(data.results ?? []));
+        getUpcomingMovies().then((data) => setUpcoming(data.results ?? []));
     }, []);
 
     return (

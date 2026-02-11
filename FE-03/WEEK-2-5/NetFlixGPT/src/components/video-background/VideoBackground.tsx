@@ -1,5 +1,5 @@
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
-// const backdrop_path = "/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg";
+
 interface VideoBackgroundProps {
     trailerKey: string | null;
     backdropPath?: string;
@@ -9,7 +9,7 @@ const VideoBackground = ({
     trailerKey,
     backdropPath,
 }: VideoBackgroundProps) => {
-    if (!backdropPath) return null;
+    // if (!backdropPath) return null;
 
     return (
         <div className="absolute inset-0">
