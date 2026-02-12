@@ -21,7 +21,7 @@
 - Update profile
 - Registre for API And Fetch movies from OMDb/TMDb
 - Automate deployment with github actions: create a workflow and add secrets properly
-
+- GPT search feature
 
 ## Features
 - Login/Sign Up \

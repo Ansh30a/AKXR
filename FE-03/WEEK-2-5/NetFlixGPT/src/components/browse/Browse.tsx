@@ -44,7 +44,7 @@ const Browse = () => {
             {heroMovie && <HeroMovie movie={heroMovie} />}
 
             {/* <RecommendedMovieContainer /> */}
-            <div className="relative z-20 -mt-15 space-y-8">
+            <div className="relative z-20 -mt-15 space-y-8 mb-20">
                 <MovieRow title="Now Playing" movies={nowPlaying} />
                 <MovieRow title="Popular" movies={popular} />
                 <MovieRow title="Top Rated" movies={topRated} />

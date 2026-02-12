@@ -7,6 +7,7 @@ import App from "./App.tsx";
 import Login from "./components/login/Login.tsx";
 import Browse from "./components/browse/Browse.tsx";
 import appStore from "./store/appStore.ts";
+import GptComponent from "./components/gpt-component/GptComponent.tsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
         children: [
             { path: "/", element: <Login /> },
             { path: "/browse", element: <Browse /> },
+            { path: "/search", element: <GptComponent />}
         ],
     },
 ]);
