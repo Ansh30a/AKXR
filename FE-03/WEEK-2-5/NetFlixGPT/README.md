@@ -22,6 +22,7 @@
 - Registre for API And Fetch movies from OMDb/TMDb
 - Automate deployment with github actions: create a workflow and add secrets properly
 
+
 ## Features
 - Login/Sign Up \
     - Sign in/ Sign up form
