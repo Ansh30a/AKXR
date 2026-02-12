@@ -9,7 +9,7 @@ const PORT = 5000;
 
 app.use(
     cors({
-        origin: ["http://localhost:5173", "https://anshxr-netflixgpt.web.app/"],
+        origin: ["http://localhost:5173", "https://anshxr-netflixgpt.web.app"],
     }),
 );
 app.use(express.json());
