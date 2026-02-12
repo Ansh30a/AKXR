@@ -8,7 +8,7 @@ interface MovieRowProps {
 
 const MovieRow = ({ title, movies }: MovieRowProps) => {
     return (
-        <div className="px-8 mb-8">
+        <div className="px-8">
             <h2 className="text-xl font-semibold mb-3">{title}</h2>
 
             <div className="flex gap-4 overflow-x-scroll scrollbar-hide">

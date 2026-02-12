@@ -23,7 +23,7 @@ const Browse = () => {
 
         const interval = setInterval(() => {
             setHeroMovieIndex((prev) => prev + (1 % nowPlaying.length));
-        }, 11000);
+        }, 20000);
 
         return () => clearInterval(interval);
     }, [nowPlaying]);
@@ -38,17 +38,18 @@ const Browse = () => {
     }, []);
 
     return (
-        <div className="pt-15 bg-black min-h-screen text-white">
+        <div className="pt-1 min-h-screen text-white bg-black">
             <Header />
 
             {heroMovie && <HeroMovie movie={heroMovie} />}
 
             {/* <RecommendedMovieContainer /> */}
-
-            <MovieRow title="Now Playing" movies={nowPlaying} />
-            <MovieRow title="Popular" movies={popular} />
-            <MovieRow title="Top Rated" movies={topRated} />
-            <MovieRow title="Upcoming" movies={upcoming} />
+            <div className="relative z-20 -mt-15 space-y-8">
+                <MovieRow title="Now Playing" movies={nowPlaying} />
+                <MovieRow title="Popular" movies={popular} />
+                <MovieRow title="Top Rated" movies={topRated} />
+                <MovieRow title="Upcoming" movies={upcoming} />
+            </div>
         </div>
     );
 };

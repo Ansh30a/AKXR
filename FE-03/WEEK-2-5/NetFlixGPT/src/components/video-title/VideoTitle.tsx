@@ -5,7 +5,7 @@ interface VideoTitleProps {
 
 const VideoTitle = ({ title, overview }: VideoTitleProps) => {
     return (
-        <div className="absolute bottom-20 left-16 max-w-xl">
+        <div className="absolute bottom-20 left-16 max-w-xl z-10">
             <h1 className="text-5xl font-bold mb-4">{title}</h1>
 
             <p className="text-lg mb-6 line-clamp-3">{overview}</p>
