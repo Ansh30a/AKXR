@@ -23,7 +23,7 @@ const Header = () => {
                 transition-all duration-300
                 justify-between
                 flex
-                ${isBrowse ? "bg-black px-8 py-1" : "px-40 pt-5"}
+                ${isBrowse ? "bg-linear-to-b from-[#212121] via-neutral-900 to-neutral-900/50 px-8 py-1" : "px-40 pt-5"}
             `}
         >
             <img
