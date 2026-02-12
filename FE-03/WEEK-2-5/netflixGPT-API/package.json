@@ -1,0 +1,23 @@
+{
+    "name": "netflixgpt-server",
+    "module": "index.ts",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "dev": "bun run src/index.ts"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.6"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@google/genai": "^1.41.0",
+        "@google/generative-ai": "^0.24.1",
+        "cors": "^2.8.6",
+        "express": "^5.2.1"
+    }
+}
