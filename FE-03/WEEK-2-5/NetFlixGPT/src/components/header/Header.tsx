@@ -46,22 +46,20 @@ const Header = () => {
                     ${isBrowse ? "w-24" : "w-40"}
                 `}
             />
-            <div className="search-bar mt-1">
-                <input
-                    className="search-input"
-                    type="text"
-                    placeholder="Search.."
-                    value={searchText}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setSearchText(e.target.value)
-                    }
-                />
-                <button
-                    onClick={handleSearch}
-                >
-                    Search on GPT
-                </button>
-            </div>
+            {isBrowse && user && (
+                <div className="search-bar mt-1">
+                    <input
+                        className="search-input"
+                        type="text"
+                        placeholder="Search.."
+                        value={searchText}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            setSearchText(e.target.value)
+                        }
+                    />
+                    <button onClick={handleSearch}>Search on GPT</button>
+                </div>
+            )}
             {isBrowse && user && (
                 <button
                     onClick={handleSignOut}
