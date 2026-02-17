@@ -43,18 +43,23 @@ const Body = () => {
     const initialData = resData as { restaurants: Restaurant[] };
 
     const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
-    // const [restaurants, setRestaurants] = useState<Restaurant[]>(
-    //     initialData.restaurants,
-    // );
+    const [allRestaurants, setAllRestaurants] = useState<Restaurant[]>([]);
 
     const [searchBarText, setSearchBarText] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
-            // const data = await fetch(import.meta.env.VITE_SWIGGY_API);
-            const data = await fetch(import.meta.env.VITE_AKXR_SWIGGY_API);
-            const json = await data.json();
-            setRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+            try {
+                const data = await fetch(import.meta.env.VITE_AKXR_SWIGGY_API);
+                const json = await data.json();
+                const fetchedRestaurants = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+                setRestaurants(fetchedRestaurants);
+                setAllRestaurants(fetchedRestaurants);
+            } catch (error) {
+                console.warn("API fetch failed, using local data:", error);
+                setRestaurants(initialData.restaurants);
+                setAllRestaurants(initialData.restaurants);
+            }
         };
 
         fetchData();
@@ -87,7 +92,7 @@ const Body = () => {
                 />
                 <button
                     onClick={() => {
-                        const filtered = initialData.restaurants.filter((res) =>
+                        const filtered = allRestaurants.filter((res) =>
                             res.info.name
                                 .toLowerCase()
                                 .includes(searchBarText.toLowerCase()),
@@ -102,7 +107,7 @@ const Body = () => {
                 <button
                     className="filter-btn"
                     onClick={() => {
-                        const filtered = initialData.restaurants.filter(
+                        const filtered = allRestaurants.filter(
                             (res) => res.info.avgRating >= 4,
                         );
                         setRestaurants(filtered);
@@ -114,8 +119,8 @@ const Body = () => {
             <div className="restaurant-container">
                 {restaurants.map((restaurant) => {
                     const CardComponent = restaurant.info.isOpen
-                    ? RestaurantCardOpen
-                    : RestaurantCard;
+                        ? RestaurantCardOpen
+                        : RestaurantCard;
                     return (
                         <CardComponent
                             key={restaurant.info.id}
