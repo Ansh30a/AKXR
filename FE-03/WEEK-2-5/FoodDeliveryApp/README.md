@@ -379,7 +379,7 @@ Created as a learning project to understand React, TypeScript, and modern web de
 
 **Note**: This is a clone/learning project inspired by Swiggy. All restaurant data is sample/mock data for educational purposes only.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Bun documentation
 - React documentation
