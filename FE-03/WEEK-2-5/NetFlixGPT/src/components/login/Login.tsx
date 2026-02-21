@@ -96,9 +96,9 @@ const Login = () => {
             <div className="absolute inset-0 bg-linear-to-b from-neutral-950/90 via-neutral-900/80 to-neutral-950"></div>
             <form
                 onSubmit={handleSubmit}
-                className="bg-linear-to-b from-neutral-950/90 via-neutral-900/80 to-neutral-950 w-28/100 m-12 p-12 absolute mt-40 mb-40 mx-auto top-0 bottom-0 right-0 left-0 flex flex-col rounded-sm"
+                className="bg-neutral-950/90 w-11/12 md:w-8/12 lg:w-4/12 md:px-12 md:py-16 px-6 py-10 absolute mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col rounded-md"
             >
-                <h1 className="text-4xl font-semibold text-white mt-2 mb-5">
+                <h1 className="text-3xl md:text-4xl font-semibold text-white mt-2 mb-5">
                     {isSignIn ? "Sign In" : "Sign Up"}
                 </h1>
                 {!isSignIn && (

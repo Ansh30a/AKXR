@@ -26,7 +26,7 @@ const HeroMovie = ({ movie }: HeroMovieProps) => {
     }, [movie.id]);
 
     return (
-        <div className="relative h-[90vh] w-full overflow-hidden">
+        <div className="relative h-[60vh] md:h-[90vh] w-full overflow-hidden">
             <VideoBackground
                 trailerKey={trailerKey}
                 backdropPath={movie.backdrop_path ?? undefined}

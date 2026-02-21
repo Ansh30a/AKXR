@@ -1,8 +1,10 @@
 import express, { type Request, type Response } from "express";
 import cors from "cors";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import Groq from "groq-sdk";
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+// Initialize Groq client
+// Render will supply GROQ_API_KEY from environment variables
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const app = express();
 const PORT = 5000;
@@ -14,8 +16,6 @@ app.use(
 );
 app.use(express.json());
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
-
 app.post("/api/suggest", async (req: Request, res: Response) => {
     try {
         const { query } = req.body;
@@ -23,13 +23,21 @@ app.post("/api/suggest", async (req: Request, res: Response) => {
         if (!query) {
             return res.status(400).json({ error: `Query required.` });
         }
-        const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash",
-        });
-        const prompt = `Return ONLY a valid JSON array of 8 real movie titles based on:"${query}"No explanation.No markdown.Only JSON.`;
 
-        const result = await model.generateContent(prompt);
-        const text = result.response.text();
+        const prompt = `Return ONLY a valid JSON array of 8 real movie titles based on: "${query}". No explanation. No markdown. Only JSON.`;
+
+        const completion = await groq.chat.completions.create({
+            messages: [
+                {
+                    role: "user",
+                    content: prompt,
+                },
+            ],
+            model: "llama3-8b-8192",
+            temperature: 0.5,
+        });
+
+        const text = completion.choices[0]?.message?.content || "[]";
 
         res.json({ movies: text });
     } catch (err) {

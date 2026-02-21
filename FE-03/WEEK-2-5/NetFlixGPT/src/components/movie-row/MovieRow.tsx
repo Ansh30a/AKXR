@@ -8,16 +8,16 @@ interface MovieRowProps {
 
 const MovieRow = ({ title, movies }: MovieRowProps) => {
     return (
-        <div className="px-8">
-            <h2 className="text-xl font-semibold mb-3">{title}</h2>
+        <div className="px-4 md:px-8">
+            <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{title}</h2>
 
-            <div className="flex gap-4 overflow-x-scroll scrollbar-hide">
+            <div className="flex gap-3 md:gap-4 overflow-x-scroll scrollbar-hide py-2">
                 {movies.map((movie) => (
                     <img
                         key={movie.id}
                         src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                         alt={movie.title}
-                        className="w-40 rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        className="w-28 md:w-40 rounded hover:scale-105 transition-transform duration-300 cursor-pointer"
                     />
                 ))}
             </div>
