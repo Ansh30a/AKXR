@@ -1,4 +1,4 @@
-# AKXR Cohort
+# AKXR Cohort - MERN
 
 ## https://thisisanshuman.in
 
