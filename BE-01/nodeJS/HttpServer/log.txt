@@ -4,3 +4,12 @@
 1773127553923: /favicon.ico New request received from localhost:9000 
 1773127560201: / New request received from localhost:9000 
 1773127560249: /favicon.ico New request received from localhost:9000 
+1773140665518: GET / New request received from localhost:9000 
+1773140725021: GET /about New request received from localhost:9000 
+1773140725076: GET /favicon.ico New request received from localhost:9000 
+1773140733459: GET /about New request received from localhost:9000 
+1773140733503: GET /favicon.ico New request received from localhost:9000 
+1773140740496: GET /about New request received from localhost:9000 
+1773140740535: GET /favicon.ico New request received from localhost:9000 
+1773140742993: GET /about New request received from localhost:9000 
+1773140743022: GET /favicon.ico New request received from localhost:9000 

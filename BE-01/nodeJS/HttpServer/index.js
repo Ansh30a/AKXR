@@ -5,7 +5,7 @@ const PORT = 9000;
 
 const app = http.createServer((req, res) => {
     // console.log(`New request received.`, req);
-    const log = `${Date.now()}: ${req.url} New request received from ${req.headers.host} \n`;
+    const log = `${Date.now()}: ${req.method} ${req.url} New request received from ${req.headers.host} \n`;
     // console.log(req.headers.host);
 
     fs.appendFile("log.txt", log, (_err, _data) => {
@@ -20,7 +20,7 @@ const app = http.createServer((req, res) => {
                 res.end(`404: Not Found.`);
                 break;
         }
-        res.end(`Thanks for connecting.`);
+        // res.end(`Thanks for connecting.`);
     });
 });
 
