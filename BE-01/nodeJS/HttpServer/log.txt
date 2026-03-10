@@ -1,0 +1,6 @@
+1773127432143: /home New request received from localhost:9000 
+1773127513490: /about New request received from localhost:9000 
+1773127553845: /about New request received from localhost:9000 
+1773127553923: /favicon.ico New request received from localhost:9000 
+1773127560201: / New request received from localhost:9000 
+1773127560249: /favicon.ico New request received from localhost:9000 
