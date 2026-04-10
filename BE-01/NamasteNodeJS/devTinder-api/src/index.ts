@@ -8,14 +8,7 @@ app.use(express.json());
 
 app.post("/sign-up", async (req, res) => {
     try {
-        const user = new User({
-            firstName: "ashley",
-            lastName: "k",
-            email: "abcde@fghij.com",
-            password: "12345678",
-            age: 21,
-            gender: "female",
-        });
+        const user = new User(req.body);
         await user.save();
 
         res.status(201).send(`user added successfully.`);
@@ -23,6 +16,67 @@ app.post("/sign-up", async (req, res) => {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(400).json({
             message: "Unable to sign up user",
+            error: message,
+        });
+    }
+});
+
+app.get("/fetchUser", async (req, res) => {
+    try {
+        const userEmail = req.body.email;
+        const user = await User.find({ email: userEmail });
+        if (user.length === 0) res.status(404).send(`not found`);
+        res.send(user);
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(500).json({
+            message: "Unable to fetch user",
+            error: message,
+        });
+    }
+});
+
+app.get("/feed", async (req, res) => {
+    try {
+        const users = await User.find({});
+        if (users.length === 0) res.status(404).send(`no users found.`);
+        res.send(users);
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(500).json({
+            message: "Unable to fetch users",
+            error: message,
+        });
+    }
+});
+
+app.delete("/user", async (req, res) => {
+    try {
+        const userId = req.body.userId;
+        const user = await User.findByIdAndDelete(userId);
+        res.send(`user deleted.`);
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(500).json({
+            message: "Unable to delete user",
+            error: message,
+        });
+    }
+});
+
+app.patch("/user", async (req, res) => {
+    try {
+        const data = req.body;
+        const user = await User.findOneAndUpdate(
+            { email: data.email },
+            // { $set: { password: data.password } },
+            data,
+        );
+        res.send(`updated successfully.`);
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(500).json({
+            message: "Unable to update user",
             error: message,
         });
     }
