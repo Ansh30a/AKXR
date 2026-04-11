@@ -71,6 +71,7 @@ app.patch("/user", async (req, res) => {
             { email: data.email },
             // { $set: { password: data.password } },
             data,
+            { runValidators: true },
         );
         res.send(`updated successfully.`);
     } catch (err) {

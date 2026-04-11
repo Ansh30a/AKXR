@@ -5,7 +5,7 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "dev": "bun --watch --env-file=src/.env src/index.ts"
+        "dev": "bun --watch --env-file=.env src/index.ts"
     },
     "devDependencies": {
         "@types/bun": "latest"

@@ -14,6 +14,7 @@ const userSchema = new Schema(
             required: true,
             unique: true,
             trim: true,
+            lowercase: true,
         },
         password: {
             type: String,
@@ -28,6 +29,20 @@ const userSchema = new Schema(
         gender: {
             type: String,
             required: true,
+            validate(value: string) {
+                const genders = [
+                    "male",
+                    "female",
+                    "others",
+                    "other",
+                    "Male",
+                    "Female",
+                    "Others",
+                    "Other",
+                ];
+                if (!genders.includes(value))
+                    throw new Error(`Gender input is not valid.`);
+            },
         },
         photoUrl: {
             type: String,
