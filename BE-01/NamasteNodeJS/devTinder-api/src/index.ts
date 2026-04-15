@@ -64,11 +64,46 @@ app.delete("/user", async (req, res) => {
     }
 });
 
-app.patch("/user", async (req, res) => {
+// app.patch("/user", async (req, res) => {
+//     try {
+//         const data = req.body;
+//         const ALLOWED_UPDATED_FIELDS = [
+//             "photoUrl",
+//             "about",
+//             "gender",
+//             "skills",
+//         ];
+//         const isUpdateAllowed = Object.keys(data).every((k) =>
+//             ALLOWED_UPDATED_FIELDS.includes(k),
+//         );
+//         if (!isUpdateAllowed) throw new Error(`Update not allowed`);
+//         const user = await User.findOneAndUpdate(
+//             { email: data.email },
+//             // { $set: { password: data.password } },
+//             data,
+//             { runValidators: true },
+//         );
+//         res.send(`updated successfully.`);
+//     } catch (err) {
+//         const message = err instanceof Error ? err.message : "Unknown error";
+//         res.status(500).json({
+//             message: "Unable to update user",
+//             error: message,
+//         });
+//     }
+// });
+
+app.patch("/user/:userId", async (req, res) => {
     try {
         const data = req.body;
-        const user = await User.findOneAndUpdate(
-            { email: data.email },
+        const userId = req.params?.userId;
+        const ALLOWED_UPDATED_FIELDS = ["photoUrl", "bio", "gender", "skills"];
+        const isUpdateAllowed = Object.keys(data).every((k) =>
+            ALLOWED_UPDATED_FIELDS.includes(k),
+        );
+        if (!isUpdateAllowed) throw new Error(`Update not allowed`);
+        const user = await User.findByIdAndUpdate(
+            { _id: userId },
             // { $set: { password: data.password } },
             data,
             { runValidators: true },

@@ -53,6 +53,7 @@ const userSchema = new Schema(
         },
         skills: {
             type: [String],
+            minLength: 30,
         },
     },
     { timestamps: true },
