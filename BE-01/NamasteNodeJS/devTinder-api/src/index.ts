@@ -43,12 +43,12 @@ app.post("/login", async (req, res) => {
         const { email, password } = req.body;
 
         const user = await User.findOne({ email: email });
-        if (!user) throw new Error("Email not present in DB.");
+        if (!user) throw new Error("Invalid credentials.");
 
         const isPasswordValid = await bcrypt.compare(password, user.password);
 
         if (isPasswordValid) res.send("User logged in successfully");
-        else throw new Error("Incorrect password.");
+        else throw new Error("Invalid credentials.");
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(400).json({
