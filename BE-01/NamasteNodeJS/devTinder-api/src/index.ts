@@ -1,6 +1,8 @@
 import express from "express";
 import ConnectDB from "./config/db";
 import User from "./models/user.model";
+import validateSignUpData from "./utils/validator";
+import bcrypt from "bcrypt";
 
 const app = express();
 
@@ -8,7 +10,22 @@ app.use(express.json());
 
 app.post("/sign-up", async (req, res) => {
     try {
-        const user = new User(req.body);
+        // Data Validation
+        validateSignUpData(req.body);
+
+        // Password Encryption
+        const { firstName, lastName, email, password, age, gender } = req.body;
+        const passwordHash = await bcrypt.hash(password, 10);
+
+        // Create new User instance
+        const user = new User({
+            firstName,
+            lastName,
+            email,
+            password: passwordHash,
+            age,
+            gender,
+        });
         await user.save();
 
         res.status(201).send(`user added successfully.`);
@@ -16,6 +33,26 @@ app.post("/sign-up", async (req, res) => {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(400).json({
             message: "Unable to sign up user",
+            error: message,
+        });
+    }
+});
+
+app.post("/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        const user = await User.findOne({ email: email });
+        if (!user) throw new Error("Email not present in DB.");
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+
+        if (isPasswordValid) res.send("User logged in successfully");
+        else throw new Error("Incorrect password.");
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(400).json({
+            message: "Unable to Log in user",
             error: message,
         });
     }
