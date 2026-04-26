@@ -3,10 +3,13 @@ import ConnectDB from "./config/db";
 import User from "./models/user.model";
 import validateSignUpData from "./utils/validator";
 import bcrypt from "bcrypt";
+import cookieParser from "cookie-parser";
+import jwt, { type JwtPayload } from "jsonwebtoken";
 
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.post("/sign-up", async (req, res) => {
     try {
@@ -47,12 +50,51 @@ app.post("/login", async (req, res) => {
 
         const isPasswordValid = await bcrypt.compare(password, user.password);
 
-        if (isPasswordValid) res.send("User logged in successfully");
-        else throw new Error("Invalid credentials.");
+        if (isPasswordValid) {
+            // JWT
+            const token = await jwt.sign(
+                { _id: user._id },
+                process.env.JWT_SECRET!,
+            );
+
+            // Add the token to cookie
+            res.cookie("token", token);
+            res.send("User logged in successfully");
+        } else throw new Error("Invalid credentials.");
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(400).json({
             message: "Unable to Log in user",
+            error: message,
+        });
+    }
+});
+
+app.get("/profile", async (req, res) => {
+    try {
+        const cookies = req.cookies;
+
+        const { token } = cookies;
+
+        if (!token) throw new Error("Invalid Token.");
+
+        // Validate the token
+        const decodedToken = (await jwt.verify(
+            token,
+            process.env.JWT_SECRET!,
+        )) as JwtPayload;
+
+        const { _id } = decodedToken;
+
+        const user = await User.findById(_id);
+
+        if (!user) throw new Error("Invalid credentials");
+
+        res.send(user);
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(400).json({
+            message: "Unable to fetch profile.",
             error: message,
         });
     }
