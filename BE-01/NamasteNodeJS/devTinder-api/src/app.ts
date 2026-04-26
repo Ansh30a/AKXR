@@ -4,7 +4,6 @@ import User from "./models/user.model";
 import validateSignUpData from "./utils/validator";
 import bcrypt from "bcrypt";
 import cookieParser from "cookie-parser";
-import jwt, { type JwtPayload } from "jsonwebtoken";
 import userAuth from "./middleware/auth";
 
 const app = express();
@@ -49,15 +48,11 @@ app.post("/login", async (req, res) => {
         const user = await User.findOne({ email: email });
         if (!user) throw new Error("Invalid credentials.");
 
-        const isPasswordValid = await bcrypt.compare(password, user.password);
+        const isPasswordValid = await user.comparePassword(password);
 
         if (isPasswordValid) {
             // JWT
-            const token = await jwt.sign(
-                { _id: user._id },
-                process.env.JWT_SECRET!,
-                { expiresIn: "1d" },
-            );
+            const token = await user.getJWT();
 
             // Add the token to cookie
             res.cookie("token", token, {
@@ -91,6 +86,7 @@ app.get("/profile", userAuth, async (req, res) => {
 app.post("/sendConnectionRequest", userAuth, (req, res) => {
     try {
         const user = req.user;
+        if (!user) throw new Error("User not found in request.");
         res.send(`${user.firstName} sent a connection request.`);
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
