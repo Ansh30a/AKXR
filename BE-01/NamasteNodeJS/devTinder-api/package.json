@@ -1,11 +1,11 @@
 {
     "name": "devtinder-api",
     "version": "1.0.0",
-    "module": "index.ts",
+    "module": "app.ts",
     "type": "module",
     "private": true,
     "scripts": {
-        "dev": "bun --watch --env-file=.env src/index.ts"
+        "dev": "bun --watch --env-file=.env src/app.ts"
     },
     "devDependencies": {
         "@types/bcrypt": "^6.0.0",
