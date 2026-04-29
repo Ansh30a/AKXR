@@ -24,8 +24,12 @@ profileRouter.patch("/profile/edit", userAuth, async (req, res) => {
             throw new Error("Invalid edit request");
 
         const user = req.user;
+        if (!user) throw new Error("User not found.");
 
-        Object.keys(req.body).forEach(key) => (user[key] = req.body)
+        Object.assign(user, req.body);
+        await user.save();
+
+        res.send("Profile update successfully.");
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(401).json({
