@@ -1,6 +1,6 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import validateSignUpData from "../utils/validator";
+import { validateSignUpData } from "../utils/validator";
 import User from "../models/user.model";
 
 const authRouter = express.Router();
@@ -61,6 +61,13 @@ authRouter.post("/login", async (req, res) => {
             error: message,
         });
     }
+});
+
+authRouter.post("/logout", (_req, res) => {
+    res.cookie("token", null, {
+        expires: new Date(Date.now()),
+    });
+    res.send("User logged out successfully");
 });
 
 export default authRouter;
