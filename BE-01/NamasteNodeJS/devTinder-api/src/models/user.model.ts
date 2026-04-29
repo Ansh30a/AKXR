@@ -53,8 +53,8 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
         gender: {
             type: String,
             required: true,
-            validate(value: string) {
-                const genders = [
+            enum: {
+                values: [
                     "male",
                     "female",
                     "others",
@@ -63,10 +63,23 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
                     "Female",
                     "Others",
                     "Other",
-                ];
-                if (!genders.includes(value))
-                    throw new Error(`Gender input is not valid.`);
+                ],
+                message: "Gender input is not valid.",
             },
+            // validate(value: string) {
+            //     const genders = [
+            //         "male",
+            //         "female",
+            //         "others",
+            //         "other",
+            //         "Male",
+            //         "Female",
+            //         "Others",
+            //         "Other",
+            //     ];
+            //     if (!genders.includes(value))
+            //         throw new Error(`Gender input is not valid.`);
+            // },
         },
         photoUrl: {
             type: String,
