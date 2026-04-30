@@ -1,9 +1,4 @@
-import {
-    Schema,
-    model,
-    type HydratedDocument,
-    type Types,
-} from "mongoose";
+import { Schema, model, type HydratedDocument, type Types } from "mongoose";
 
 const connectionRequestStatuses = [
     "ignored",
@@ -44,15 +39,14 @@ const connectionRequestSchema = new Schema<IConnectionRequest>(
     { timestamps: true },
 );
 
-connectionRequestSchema.pre(
-    "save",
-    function (this: ConnectionRequestDocument) {
-        // Check if the sender and receiver are the same (both IDs are same)
-        if (this.fromUserId.equals(this.toUserId)) {
-            throw new Error("Sender and receiver are the same.");
-        }
-    },
-);
+connectionRequestSchema.index({ fromUserId: 1, toUserId: 1 });
+
+connectionRequestSchema.pre("save", function (this: ConnectionRequestDocument) {
+    // Check if the sender and receiver are the same (both IDs are same)
+    if (this.fromUserId.equals(this.toUserId)) {
+        throw new Error("Sender and receiver are the same.");
+    }
+});
 
 const ConnectionRequest = model<IConnectionRequest>(
     "ConnectionRequest",
