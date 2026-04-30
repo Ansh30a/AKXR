@@ -59,7 +59,11 @@ requestRouter.post(
 
             const data = await connectionRequest.save();
 
-            res.json({ message: "Request sent successfully.", data });
+            let message;
+            if (status === "ignored") message = "Ignored Successfully.";
+            else message = "Request sent successfully.";
+            
+            res.json({ message: message, data });
         } catch (err) {
             const message =
                 err instanceof Error ? err.message : "Unknown error";
