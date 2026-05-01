@@ -1,8 +1,10 @@
 # DevTinder APIs List
 
 ## Auth Router
-- POST /signup
+- POST /sign-up
 - POST /login
+- POST /forgot-password
+- POST /reset-password/:token
 - POST /logout
 
 ## Profile Router

@@ -12,6 +12,8 @@ export interface IUser {
     photoUrl?: string;
     bio: string;
     skills: string[];
+    passwordResetToken?: string;
+    passwordResetTokenExpiresAt?: Date;
 }
 
 export interface IUserMethods {
@@ -92,9 +94,19 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
             type: [String],
             minLength: 30,
         },
+        passwordResetToken: {
+            type: String,
+            select: false,
+        },
+        passwordResetTokenExpiresAt: {
+            type: Date,
+            select: false,
+        },
     },
     { timestamps: true },
 );
+
+userSchema.index({ passwordResetToken: 1 });
 
 userSchema.methods.getJWT = async function (this: UserDocument) {
     return jwt.sign({ _id: this._id }, process.env.JWT_SECRET!, {

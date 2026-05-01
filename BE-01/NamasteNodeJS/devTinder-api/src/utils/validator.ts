@@ -12,6 +12,23 @@ const validateSignUpData = (data: any) => {
         throw new Error("Enter a strong password");
 };
 
+const validateForgotPasswordData = (data: any) => {
+    const { email } = data;
+
+    if (!email || !validator.isEmail(email)) throw new Error("Email is not valid");
+};
+
+const validateResetPasswordData = (data: any) => {
+    const { password, confirmPassword } = data;
+
+    if (!password || !confirmPassword)
+        throw new Error("Password and confirm password are required.");
+    else if (password !== confirmPassword)
+        throw new Error("Passwords do not match.");
+    else if (!validator.isStrongPassword(password))
+        throw new Error("Enter a strong password");
+};
+
 const validateProfileEditData = (req: Request) => {
     const { firstName, lastName, age, gender, photoUrl, bio, skills } =
         req.body;
@@ -33,4 +50,9 @@ const validateProfileEditData = (req: Request) => {
     return isEditAllowed;
 };
 
-export { validateSignUpData, validateProfileEditData };
+export {
+    validateSignUpData,
+    validateProfileEditData,
+    validateForgotPasswordData,
+    validateResetPasswordData,
+};
