@@ -4,6 +4,15 @@ import ConnectionRequest from "../models/connectionRequest.model";
 
 const userRouter = express.Router();
 
+const USER_SAFE_DATA = [
+    "firstName",
+    "lastName",
+    "photoUrl",
+    "age",
+    "gender",
+    "skills",
+];
+
 // GET all the pending connection requests for the logged in user
 userRouter.get("/user/requests/received", userAuth, async (req, res) => {
     try {
@@ -12,14 +21,7 @@ userRouter.get("/user/requests/received", userAuth, async (req, res) => {
         const connectionRequests = await ConnectionRequest.find({
             toUserId: loggedInUser._id,
             status: "interested",
-        }).populate("fromUserId", [
-            "firstName",
-            "lastName",
-            "photoUrl",
-            "age",
-            "gender",
-            "skills",
-        ]);
+        }).populate("fromUserId", USER_SAFE_DATA);
 
         res.json({
             message: "Requests fetched successfully",
@@ -36,25 +38,25 @@ userRouter.get("/user/requests/received", userAuth, async (req, res) => {
 
 userRouter.get("/user/connections", userAuth, async (req, res) => {
     try {
-        const loggedInUser = req.user;
+        const loggedInUser = req.user!;
 
         const connections = await ConnectionRequest.find({
             $or: [
                 { fromUserId: loggedInUser?._id, status: "accepted" },
                 { toUserId: loggedInUser?._id, status: "accepted" },
             ],
-        }).populate("fromUserId", [
-            "firstName",
-            "lastName",
-            "photoUrl",
-            "age",
-            "gender",
-            "skills",
-        ]);
+        })
+            .populate("fromUserId", USER_SAFE_DATA)
+            .populate("toUserId", USER_SAFE_DATA);
 
         if (!connections) return res.json({ message: "No connections found." });
 
-        const data = connections.map((row) => row.fromUserId);
+        const data = connections.map((row) => {
+            if (row.fromUserId._id.toString() === loggedInUser._id.toString())
+                return row.toUserId;
+
+            return row.fromUserId;
+        });
 
         res.json({ message: "Connections found.", data });
     } catch (err) {
