@@ -1,6 +1,7 @@
 import express from "express";
 import userAuth from "../middleware/auth";
 import ConnectionRequest from "../models/connectionRequest.model";
+import User from "../models/user.model";
 
 const userRouter = express.Router();
 
@@ -63,6 +64,41 @@ userRouter.get("/user/connections", userAuth, async (req, res) => {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(400).json({
             message: "Unable to fetch the connections.",
+            error: message,
+        });
+    }
+});
+
+userRouter.get("/user/feed", userAuth, async (req, res) => {
+    try {
+        const loggedInUser = req.user!;
+
+        const allConnectionRequests = await ConnectionRequest.find({
+            $or: [
+                { fromUserId: loggedInUser._id },
+                { toUserId: loggedInUser._id },
+            ],
+        }).select("fromUserId toUserId");
+
+        const hideUsersFromFeed = new Set();
+
+        allConnectionRequests.forEach((req) => {
+            hideUsersFromFeed.add(req.fromUserId.toString());
+            hideUsersFromFeed.add(req.toUserId.toString());
+        });
+
+        const feedUsers = await User.findById({
+            $and: [
+                { _id: { $nin: Array.from(hideUsersFromFeed) } },
+                { _id: { $ne: loggedInUser._id } },
+            ],
+        }).select(USER_SAFE_DATA);
+
+        res.send(feedUsers);
+    } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        res.status(400).json({
+            message: "Unable to fetch your feed.",
             error: message,
         });
     }
