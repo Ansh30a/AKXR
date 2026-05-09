@@ -7,10 +7,14 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const res = await axios.post(import.meta.env.VITE_BASE_API_URL!, {
-                emailId,
-                password,
-            });
+            const res = await axios.post(
+                import.meta.env.VITE_BASE_API_URL! + "/login",
+                {
+                    email: emailId,
+                    password,
+                },
+                { withCredentials: true },
+            );
             console.log(res);
         } catch (err) {
             console.error(err);

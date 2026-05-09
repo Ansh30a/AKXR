@@ -12,7 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors());
+let corsOptions = {
+    origin: process.env.FRONTEND_URL!,
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use("/", authRouter);
 app.use("/", profileRouter);
