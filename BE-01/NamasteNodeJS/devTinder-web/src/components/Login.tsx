@@ -22,7 +22,7 @@ const Login = () => {
     };
 
     return (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-20">
             <div className="card w-96 bg-black shadow-sm">
                 <div className="card-body">
                     {/* <span className="badge badge-xs badge-warning">
