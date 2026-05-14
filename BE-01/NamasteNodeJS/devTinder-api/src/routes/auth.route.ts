@@ -11,7 +11,7 @@ authRouter.post("/sign-up", async (req, res) => {
         validateSignUpData(req.body);
 
         // Password Encryption
-        const { firstName, lastName, email, password, age, gender } = req.body;
+        const { firstName, lastName, email, password, age, gender, photoUrl } = req.body;
         const passwordHash = await bcrypt.hash(password, 10);
 
         // Create new User instance
@@ -22,6 +22,7 @@ authRouter.post("/sign-up", async (req, res) => {
             password: passwordHash,
             age,
             gender,
+            photoUrl,
         });
         await user.save();
 
@@ -52,7 +53,8 @@ authRouter.post("/login", async (req, res) => {
             res.cookie("token", token, {
                 expires: new Date(Date.now() + 24 * 3600000),
             });
-            res.send("User logged in successfully");
+            const { password: _password, ...userData } = user.toObject();
+            res.json(userData);
         } else throw new Error("Invalid credentials.");
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";

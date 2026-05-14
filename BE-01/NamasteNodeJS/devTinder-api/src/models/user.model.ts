@@ -83,6 +83,7 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
         },
         photoUrl: {
             type: String,
+            default: "Default profile photo URL.",
         },
         bio: {
             type: String,
