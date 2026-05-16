@@ -1,8 +1,44 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { addUser } from "../slice/userSlice";
+import { useEffect } from "react";
+import type { RootState } from "../store/appStore";
 
 const Body = () => {
+    const dispatch = useDispatch();
+
+    const navigate = useNavigate();
+
+    const userData = useSelector((store: RootState) => store.user);
+
+    const fetchUser = async () => {
+        try {
+            if (userData) return;
+            const user = await axios.get(
+                import.meta.env.VITE_BASE_API_URL + "/profile",
+                { withCredentials: true },
+            );
+            dispatch(addUser(user.data));
+        } catch (err: unknown) {
+            if (axios.isAxiosError(err)) {
+                const status = err.response?.status;
+                if (status === 401) {
+                    return navigate("/login");
+                }
+                console.error(err);
+            } else {
+                console.error(err);
+            }
+        }
+    };
+
+    useEffect(() => {
+        fetchUser();
+    }, []);
+
     return (
         <div className="flex min-h-screen flex-col">
             <Navbar />

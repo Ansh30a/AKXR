@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/appStore";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const user = useSelector((store: RootState) => store.user.userInfo);
@@ -7,10 +8,10 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-300 shadow-sm">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl" href="/">
+                <Link className="btn btn-ghost text-xl" to="/">
                     <img src="/logo.svg" className="w-20" />
                     DevTinder
-                </a>
+                </Link>
             </div>
             <div className="flex gap-2">
                 {/* <input
@@ -19,7 +20,7 @@ const Navbar = () => {
                     className="input input-bordered w-24 md:w-auto"
                 /> */}
                 {user && (
-                    <div className="dropdown dropdown-end mx-10">
+                    <div className="dropdown dropdown-end mx-10 flex gap-10">
                         <p className="my-auto">Welcome, {user.firstName}</p>
                         <div
                             tabIndex={0}
@@ -41,19 +42,19 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={-1}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-10 w-52 p-2 shadow"
                         >
-                            <li>
+                            {/* <li>
                                 <p className="my-auto text-md border-b border-s-inherit">
                                     Welcome, {user.firstName}
                                 </p>
-                            </li>
+                            </li> */}
 
                             <li>
-                                <a className="justify-between">
+                                <Link to="/profile" className="justify-between">
                                     Profile
                                     {/* <span className="badge">New</span> */}
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a>Settings</a>
