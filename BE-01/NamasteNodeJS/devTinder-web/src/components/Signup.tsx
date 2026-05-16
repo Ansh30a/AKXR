@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
     const [firstName, setFirstName] = useState<string>("");
@@ -50,7 +50,7 @@ const Signup = () => {
     };
 
     return (
-        <div className="flex justify-center mt-5 mb-5">
+        <div className="flex justify-center mt-5 mb-5 gap-10">
             <div className="card w-96 bg-black shadow-sm">
                 <div className="card-body">
                     {/* <span className="badge badge-xs badge-warning">
@@ -161,7 +161,7 @@ const Signup = () => {
                         <label className="input validator">
                             <input
                                 type="number"
-                                placeholder='21'
+                                placeholder="21"
                                 required
                                 value={age}
                                 onChange={(e) => setAge(e.target.value)}
@@ -224,7 +224,17 @@ const Signup = () => {
                             Sign Up
                         </button>
                     </div>
+                    <p className="text-center mt-5">
+                        Already have an Account?{" "}
+                        <Link to="/login" className="font-bold">
+                            Login
+                        </Link>
+                    </p>
                 </div>
+            </div>
+
+            <div className="w-50 mt-50">
+                <img src={photoUrl} className="rounded-full" />
             </div>
         </div>
     );
