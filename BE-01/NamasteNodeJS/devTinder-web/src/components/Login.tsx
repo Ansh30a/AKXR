@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
     const [emailId, setEmailId] = useState<string>("iamanshuman30@gmail.com");
     const [password, setPassword] = useState<string>("Ansh@123");
+    const [error, setError] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -22,8 +23,12 @@ const Login = () => {
             );
             dispatch(addUser(res.data));
             return navigate("/");
-        } catch (err) {
-            console.error(err);
+        } catch (err: unknown) {
+            if (axios.isAxiosError(err)) {
+                setError(
+                    err.response?.data?.message ?? err.message ?? "Login failed",
+                );
+            }
         }
     };
 
@@ -112,6 +117,10 @@ const Login = () => {
                             />
                         </label>
                     </div>
+
+                    <p className="flex justify-center mt-4 text-red-500">
+                        {error}
+                    </p>
 
                     <div className="mt-6 items-center mx-auto">
                         <button
