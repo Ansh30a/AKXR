@@ -91,7 +91,7 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
         },
         skills: {
             type: [String],
-            minLength: 30,
+            default: ["Ts"],
         },
     },
     { timestamps: true },
