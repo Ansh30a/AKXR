@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slice/userSlice";
 import type { User } from "../types/user";
+import UserCard from "./UserCard";
 
 const EditProfile = ({ user }: { user: User }) => {
     const dispatch = useDispatch();
@@ -49,7 +50,7 @@ const EditProfile = ({ user }: { user: User }) => {
     };
 
     return (
-        <div className="flex gap-50">
+        <div className="flex gap-30">
             <div>
                 <fieldset className="fieldset bg-base-300 border-base-300 rounded-box w-xs border p-4">
                     <legend className="fieldset-legend">Edit Profile</legend>
@@ -110,13 +111,23 @@ const EditProfile = ({ user }: { user: User }) => {
                         onChange={(e) => setPhotoUrl(e.target.value)}
                     />
 
-                    <button className="btn btn-primary my-auto" onClick={handleSave}>
+                    <button
+                        className="btn btn-primary mt-10"
+                        onClick={handleSave}
+                    >
                         Save
                     </button>
                 </fieldset>
             </div>
-            <div className="my-auto">
-                <img src={user.photoUrl} alt="profile-photo" className="rounded-full w-50" />
+            {/* <div className="my-auto">
+                <img
+                    src={user.photoUrl}
+                    alt="profile-photo"
+                    className="rounded-full w-50"
+                />
+            </div> */}
+            <div className="my-auto ">
+                <UserCard user={user} />
             </div>
         </div>
     );

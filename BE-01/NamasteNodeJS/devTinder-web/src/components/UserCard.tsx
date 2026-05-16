@@ -8,7 +8,7 @@ const UserCard = ({ user }: { user: User }) => {
     const handleInterested = async () => {};
 
     return (
-        <div className="card bg-base-300 w-96 shadow-sm mt-30">
+        <div className="card bg-base-300 w-96 shadow-sm">
             <figure>
                 <img
                     src={

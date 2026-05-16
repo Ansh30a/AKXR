@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slice/userSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [emailId, setEmailId] = useState<string>("iamanshuman30@gmail.com");
@@ -26,7 +26,9 @@ const Login = () => {
         } catch (err: unknown) {
             if (axios.isAxiosError(err)) {
                 setError(
-                    err.response?.data?.message ?? err.message ?? "Login failed",
+                    err.response?.data?.message ??
+                        err.message ??
+                        "Login failed",
                 );
             }
         }
@@ -130,6 +132,9 @@ const Login = () => {
                             Login
                         </button>
                     </div>
+                    <p className="text-center mt-5">
+                        Don't have an Account? <Link to="/signup" className="font-bold">SignUp</Link>
+                    </p>
                 </div>
             </div>
         </div>
