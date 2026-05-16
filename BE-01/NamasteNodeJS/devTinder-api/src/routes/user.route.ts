@@ -92,17 +92,16 @@ userRouter.get("/user/feed", userAuth, async (req, res) => {
             hideUsersFromFeed.add(req.toUserId.toString());
         });
 
-        const feedUsers = await User.findById({
-            $and: [
-                { _id: { $nin: Array.from(hideUsersFromFeed) } },
-                { _id: { $ne: loggedInUser._id } },
-            ],
+        const excluded = Array.from(hideUsersFromFeed) as string[];
+
+        const feedUsers = await User.find({
+            _id: { $nin: excluded, $ne: loggedInUser._id },
         })
             .select(USER_SAFE_DATA)
             .skip(skip)
             .limit(limit);
 
-        if (feedUsers?.$isEmpty) res.send("No users left to show.");
+        if (!feedUsers || feedUsers.length === 0) return res.send("No users left to show.");
 
         res.send(feedUsers);
     } catch (err) {
