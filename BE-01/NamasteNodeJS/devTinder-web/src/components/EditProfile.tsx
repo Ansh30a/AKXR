@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slice/userSlice";
 import type { User } from "../types/user";
-import UserCard from "./UserCard";
+import PreviewCard from "./PreviewCard";
 
 const EditProfile = ({ user }: { user: User }) => {
     const dispatch = useDispatch();
@@ -232,7 +232,7 @@ const EditProfile = ({ user }: { user: User }) => {
                 />
             </div> */}
                 <div className="my-auto self-start pt-6">
-                    <UserCard user={user} />
+                    <PreviewCard user={user} />
                 </div>
             </div>
         </div>
