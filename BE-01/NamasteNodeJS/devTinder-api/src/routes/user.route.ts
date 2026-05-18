@@ -102,9 +102,9 @@ userRouter.get("/user/feed", userAuth, async (req, res) => {
             .skip(skip)
             .limit(limit);
 
-        if (!feedUsers || feedUsers.length === 0) return res.send("No users left to show.");
+        if (!feedUsers || feedUsers.length === 0) return res.json([]);
 
-        res.send(feedUsers);
+        res.json(feedUsers);
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         res.status(400).json({

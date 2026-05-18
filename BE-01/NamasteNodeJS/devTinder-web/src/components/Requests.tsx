@@ -1,10 +1,10 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../store/appStore";
 import type { ConnectionRequest } from "../types/user";
 import RequestCard from "./RequestCard";
 import { addRequests, removeRequest } from "../slice/requestSlice";
+import api from "../lib/api";
 
 const Requests = () => {
     const dispatch = useDispatch();
@@ -22,10 +22,7 @@ const Requests = () => {
         try {
             setLoading(true);
             setError(null);
-            const res = await axios.get(
-                import.meta.env.VITE_BASE_API_URL + "/user/requests/received",
-                { withCredentials: true },
-            );
+            const res = await api.get("/user/requests/received");
             // API returns { message, data }
             const data = res.data?.data ?? [];
             dispatch(addRequests(data));
@@ -43,11 +40,7 @@ const Requests = () => {
         try {
             setReviewingRequestId(requestId);
             setError(null);
-            await axios.post(
-                `${import.meta.env.VITE_BASE_API_URL}/request/review/${status}/${requestId}`,
-                {},
-                { withCredentials: true },
-            );
+            await api.post(`/request/review/${status}/${requestId}`);
             dispatch(removeRequest(requestId));
         } catch (err) {
             console.error(err);

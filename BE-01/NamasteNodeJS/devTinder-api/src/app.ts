@@ -13,8 +13,10 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 
-let corsOptions = {
-    origin: process.env.FRONTEND_URL!,
+const frontendUrl = process.env.FRONTEND_URL?.replace(/\/+$/, "");
+
+const corsOptions = {
+    origin: frontendUrl,
     credentials: true,
 };
 

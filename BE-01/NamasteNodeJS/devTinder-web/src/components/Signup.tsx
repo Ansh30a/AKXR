@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import api from "../lib/api";
 
 const Signup = () => {
     const [firstName, setFirstName] = useState<string>("");
@@ -32,11 +33,7 @@ const Signup = () => {
                     .filter(Boolean),
             };
 
-            await axios.post(
-                import.meta.env.VITE_BASE_API_URL! + "/sign-up",
-                payload,
-                { withCredentials: true },
-            );
+            await api.post("/sign-up", payload);
             return navigate("/login");
         } catch (err: unknown) {
             if (axios.isAxiosError(err)) {

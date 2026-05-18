@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slice/userSlice";
 import { Link, useNavigate } from "react-router-dom";
+import api from "../lib/api";
 
 const Login = () => {
     const [emailId, setEmailId] = useState<string>("iamanshuman30@gmail.com");
@@ -13,14 +14,10 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const res = await axios.post(
-                import.meta.env.VITE_BASE_API_URL! + "/login",
-                {
-                    email: emailId,
-                    password,
-                },
-                { withCredentials: true },
-            );
+            const res = await api.post("/login", {
+                email: emailId,
+                password,
+            });
             dispatch(addUser(res.data));
             return navigate("/");
         } catch (err: unknown) {

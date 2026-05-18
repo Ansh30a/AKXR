@@ -1,7 +1,7 @@
-import axios from "axios";
 import type { User } from "../types/user";
 import { useDispatch } from "react-redux";
 import { removeFeed } from "../slice/feedSlice";
+import api from "../lib/api";
 
 const UserCard = ({ user }: { user: User }) => {
     const { firstName, photoUrl, bio, lastName, age, gender } = user;
@@ -10,11 +10,7 @@ const UserCard = ({ user }: { user: User }) => {
 
     const handleRequest = async (status: string, userId: string) => {
         try {
-            await axios.post(
-                `${import.meta.env.VITE_BASE_API_URL}/request/send/${status}/${userId}`,
-                {},
-                { withCredentials: true },
-            );
+            await api.post(`/request/send/${status}/${userId}`);
             dispatch(removeFeed(userId));
         } catch (err) {
             console.error(err);

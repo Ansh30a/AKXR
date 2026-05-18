@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slice/userSlice";
 import type { User } from "../types/user";
 import PreviewCard from "./PreviewCard";
+import api from "../lib/api";
 
 const EditProfile = ({ user }: { user: User }) => {
     const dispatch = useDispatch();
@@ -60,11 +60,7 @@ const EditProfile = ({ user }: { user: User }) => {
                 photoUrl,
             };
 
-            await axios.patch(
-                import.meta.env.VITE_BASE_API_URL + "/profile/edit",
-                payload,
-                { withCredentials: true },
-            );
+            await api.patch("/profile/edit", payload);
 
             const remainingSavingTime = Math.max(
                 0,
@@ -80,10 +76,7 @@ const EditProfile = ({ user }: { user: User }) => {
             setToastState("success");
             setToastVisible(true);
 
-            const res = await axios.get(
-                import.meta.env.VITE_BASE_API_URL + "/profile",
-                { withCredentials: true },
-            );
+            const res = await api.get("/profile");
             dispatch(addUser(res.data));
 
             await wait(2000);

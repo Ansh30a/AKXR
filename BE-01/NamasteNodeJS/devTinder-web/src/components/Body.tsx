@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { addUser } from "../slice/userSlice";
 import { useCallback, useEffect, useState } from "react";
+import api from "../lib/api";
 
 const Body = () => {
     const dispatch = useDispatch();
@@ -14,10 +15,7 @@ const Body = () => {
 
     const fetchUser = useCallback(async () => {
         try {
-            const user = await axios.get(
-                import.meta.env.VITE_BASE_API_URL + "/profile",
-                { withCredentials: true },
-            );
+            const user = await api.get("/profile");
             dispatch(addUser(user.data));
         } catch (err: unknown) {
             if (axios.isAxiosError(err)) {

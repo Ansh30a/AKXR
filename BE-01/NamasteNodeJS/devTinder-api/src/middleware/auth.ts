@@ -29,7 +29,7 @@ const userAuth = async (req: Request, res: Response, next: NextFunction) => {
         next();
     } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
-        return res.status(400).json({
+        return res.status(401).json({
             message: "Auth failed.",
             error: message,
         });

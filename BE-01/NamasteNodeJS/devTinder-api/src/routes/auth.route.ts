@@ -2,8 +2,16 @@ import express from "express";
 import bcrypt from "bcrypt";
 import { validateSignUpData } from "../utils/validator";
 import User from "../models/user.model";
+import type { CookieOptions } from "express";
 
 const authRouter = express.Router();
+
+const getAuthCookieOptions = (): CookieOptions => ({
+    expires: new Date(Date.now() + 24 * 3600000),
+    httpOnly: true,
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    secure: process.env.NODE_ENV === "production",
+});
 
 authRouter.post("/sign-up", async (req, res) => {
     try {
@@ -52,9 +60,7 @@ authRouter.post("/login", async (req, res) => {
             const token = await user.getJWT();
 
             // Add the token to cookie
-            res.cookie("token", token, {
-                expires: new Date(Date.now() + 24 * 3600000),
-            });
+            res.cookie("token", token, getAuthCookieOptions());
             const { password: _password, ...userData } = user.toObject();
             res.json(userData);
         } else throw new Error("Invalid credentials.");
@@ -70,6 +76,9 @@ authRouter.post("/login", async (req, res) => {
 authRouter.post("/logout", (_req, res) => {
     res.cookie("token", null, {
         expires: new Date(Date.now()),
+        httpOnly: true,
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        secure: process.env.NODE_ENV === "production",
     });
     res.send("User logged out successfully");
 });
