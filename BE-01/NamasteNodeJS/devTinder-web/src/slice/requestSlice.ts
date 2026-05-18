@@ -1,19 +1,23 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { User } from "../types/user";
+import type { ConnectionRequest } from "../types/user";
 
-type RequestState = User[];
+type RequestState = ConnectionRequest[];
 
 const initialState: RequestState = [];
 
-const connectionSlice = createSlice({
-    name: "connection",
+const requestSlice = createSlice({
+    name: "request",
     initialState,
     reducers: {
-        addRequests: (_state, action: PayloadAction<User[]>) => action.payload,
+        addRequests: (_state, action: PayloadAction<ConnectionRequest[]>) =>
+            action.payload,
+        removeRequest: (state, action: PayloadAction<string>) =>
+            state.filter((request) => request._id !== action.payload),
         removeRequests: () => [],
     },
 });
 
-export const { addRequests, removeRequests } = connectionSlice.actions;
+export const { addRequests, removeRequest, removeRequests } =
+    requestSlice.actions;
 
-export default connectionSlice.reducer;
+export default requestSlice.reducer;

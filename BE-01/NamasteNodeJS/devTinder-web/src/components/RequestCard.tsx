@@ -1,6 +1,22 @@
-import type { User } from "../types/user";
+import type { ConnectionRequest } from "../types/user";
 
-const RequestCard = ({ user }: { user: User }) => {
+type RequestCardProps = {
+    request: ConnectionRequest;
+    onReview: (
+        status: "accepted" | "rejected",
+        requestId: string,
+    ) => Promise<void>;
+    reviewingRequestId?: string | null;
+};
+
+const RequestCard = ({
+    request,
+    onReview,
+    reviewingRequestId,
+}: RequestCardProps) => {
+    const user = request.fromUserId;
+    const isReviewing = reviewingRequestId === request._id;
+
     return (
         <div className="flex flex-col bg-gray-700 rounded-lg shadow-lg overflow-hidden">
             <div className="flex items-center gap-10 p-4">
@@ -13,13 +29,14 @@ const RequestCard = ({ user }: { user: User }) => {
                     <h3 className="text-lg font-semibold">
                         {user.firstName} {user.lastName}
                     </h3>
-                    <h3 className="text-lg font-semibold">{user.bio}</h3>
                     <p className="text-sm text-muted">
-                        {user.age} • {user.gender}
+                        {[user.age, user.gender].filter(Boolean).join(" • ")}
                     </p>
-                    <p className="mt-2 text-sm text-gray-300 truncate">
-                        {user.bio}
-                    </p>
+                    {user.bio && (
+                        <p className="mt-2 text-sm text-gray-300 truncate">
+                            {user.bio}
+                        </p>
+                    )}
                     {Array.isArray(user.skills) && user.skills.length > 0 && (
                         <div className="mt-3 flex flex-wrap gap-2">
                             {user.skills.map((s) => (
@@ -35,8 +52,20 @@ const RequestCard = ({ user }: { user: User }) => {
                 </div>
             </div>
             <div className="p-3 border-t border-base-200 flex gap-3 justify-end">
-                <button className="btn btn-sm btn-ghost">Accept</button>
-                <button className="btn btn-sm btn-outline">Reject</button>
+                <button
+                    className="btn btn-sm btn-primary"
+                    disabled={isReviewing}
+                    onClick={() => void onReview("accepted", request._id)}
+                >
+                    {isReviewing ? "Accepting..." : "Accept"}
+                </button>
+                <button
+                    className="btn btn-sm btn-outline btn-error"
+                    disabled={isReviewing}
+                    onClick={() => void onReview("rejected", request._id)}
+                >
+                    {isReviewing ? "Rejecting..." : "Reject"}
+                </button>
             </div>
         </div>
     );
