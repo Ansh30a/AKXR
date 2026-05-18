@@ -1,4 +1,8 @@
-# DevTinder
+<!-- ![DevTinder-logo](/devTinder-web/public/logo.svg) -->
+
+
+
+# <img src="devTinder-web/public/logo.svg" alt="DevTinder Logo" width="40" height="40" style="vertical-align: middle; margin-right: 10px;"> DevTinder
 
 A full-stack developer networking and connection platform built with modern web technologies. DevTinder enables developers to connect, share profiles, send connection requests, and build their professional network.
 
