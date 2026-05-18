@@ -1,14 +1,28 @@
+import axios from "axios";
 import type { User } from "../types/user";
+import { useDispatch } from "react-redux";
+import { removeFeed } from "../slice/feedSlice";
 
 const UserCard = ({ user }: { user: User }) => {
     const { firstName, photoUrl, bio, lastName, age, gender } = user;
 
-    const handleIgnore = async () => {};
+    const dispatch = useDispatch();
 
-    const handleInterested = async () => {};
+    const handleRequest = async (status: string, userId: string) => {
+        try {
+            await axios.post(
+                `${import.meta.env.VITE_BASE_API_URL}/request/send/${status}/${userId}`,
+                {},
+                { withCredentials: true },
+            );
+            dispatch(removeFeed(userId));
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     return (
-        <div className="card bg-base-300 w-96 shadow-sm">
+        <div className="card bg-base-300 w-75 shadow-sm mt-5">
             <figure>
                 <img
                     src={
@@ -16,6 +30,7 @@ const UserCard = ({ user }: { user: User }) => {
                         "https://via.placeholder.com/300x200?text=No+Image"
                     }
                     alt={firstName + "'s photo"}
+                    className="w-75"
                 />
             </figure>
             <div className="card-body flex items-center justify-center">
@@ -29,13 +44,13 @@ const UserCard = ({ user }: { user: User }) => {
                 <div className="card-actions justify-center">
                     <button
                         className="btn btn-error flex justify-center"
-                        onClick={handleIgnore}
+                        onClick={() => handleRequest("ignored", user._id)}
                     >
                         Ignore
                     </button>
                     <button
                         className="btn btn-primary flex justify-center"
-                        onClick={handleInterested}
+                        onClick={() => handleRequest("interested", user._id)}
                     >
                         Interested
                     </button>

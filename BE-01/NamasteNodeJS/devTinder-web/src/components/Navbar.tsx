@@ -71,6 +71,12 @@ const Navbar = () => {
                             </li> */}
 
                             <li>
+                                <Link to="/" className="justify-between">
+                                    Feed
+                                    {/* <span className="badge">New</span> */}
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to="/profile" className="justify-between">
                                     Profile
                                     {/* <span className="badge">New</span> */}
@@ -88,9 +94,9 @@ const Navbar = () => {
                                     {/* <span className="badge">New</span> */}
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a>Settings</a>
-                            </li>
+                            </li> */}
                             <li>
                                 <a onClick={handleLogout}>Logout</a>
                             </li>

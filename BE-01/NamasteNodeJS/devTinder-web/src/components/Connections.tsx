@@ -37,7 +37,7 @@ const Connections = () => {
 
     if (loading) return <div className="p-6">Loading connections…</div>;
     if (!connections || connections.length === 0)
-        return <div className="p-6">No Connections Found.</div>;
+        return <span className="text-xl justify-center flex font-bold p-6 bg-gray-500 rounded-full w-[75%] mt-10 mx-auto">No Connections Found.</span>
 
     
 

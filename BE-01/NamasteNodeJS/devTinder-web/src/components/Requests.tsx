@@ -63,8 +63,7 @@ const Requests = () => {
 
     if (loading) return <div className="p-6">Loading requests...</div>;
     if (!requests || requests.length === 0)
-        return <div className="p-6">No Requests Found.</div>;
-
+        return <span className="text-xl justify-center flex font-bold p-6 bg-gray-500 rounded-full w-[75%] mt-10 mx-auto">No Requests Found.</span>
     return (
         <div className="container mx-auto p-6">
             <h1 className="text-4xl font-bold mb-6">Requests</h1>
