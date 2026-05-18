@@ -8,6 +8,7 @@ import requestRouter from "./routes/request.route";
 import userRouter from "./routes/user.route";
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cookieParser());
@@ -28,8 +29,8 @@ ConnectDB()
     .then(() => {
         console.log(`MongoDB connected successfully`);
 
-        app.listen(5000, () => {
-            console.log(`Server running on 5000.`);
+        app.listen(PORT, () => {
+            console.log(`Server running on ${PORT}.`);
         });
     })
     .catch((err) => {

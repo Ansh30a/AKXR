@@ -4,14 +4,15 @@ import { useDispatch } from "react-redux";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { addUser } from "../slice/userSlice";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const Body = () => {
     const dispatch = useDispatch();
+    const [checkingAuth, setCheckingAuth] = useState(true);
 
     const navigate = useNavigate();
 
-    const fetchUser = async () => {
+    const fetchUser = useCallback(async () => {
         try {
             const user = await axios.get(
                 import.meta.env.VITE_BASE_API_URL + "/profile",
@@ -22,24 +23,31 @@ const Body = () => {
             if (axios.isAxiosError(err)) {
                 const status = err.response?.status;
                 if (status === 401) {
-                    return navigate("/login");
+                    navigate("/login", { replace: true });
+                    return;
                 }
                 console.error(err);
             } else {
                 console.error(err);
             }
+        } finally {
+            setCheckingAuth(false);
         }
-    };
+    }, [dispatch, navigate]);
 
     useEffect(() => {
-        fetchUser();
-    }, []);
+        void fetchUser();
+    }, [fetchUser]);
 
     return (
         <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">
-                <Outlet />
+                {checkingAuth ? (
+                    <div className="p-6 text-center">Loading...</div>
+                ) : (
+                    <Outlet />
+                )}
             </main>
             <Footer />
         </div>
