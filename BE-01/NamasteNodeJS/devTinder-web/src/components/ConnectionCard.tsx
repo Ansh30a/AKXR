@@ -1,10 +1,11 @@
 import type { User } from "../types/user";
+import { getProfilePhotoUrl } from "../lib/image";
 
 const ConnectionCard = ({ user }: { user: User }) => (
     <div className="flex flex-col bg-gray-700 rounded-lg shadow-lg overflow-hidden">
         <div className="flex items-center gap-10 p-4">
             <img
-                src={user.photoUrl ?? "https://via.placeholder.com/120"}
+                src={getProfilePhotoUrl(user.photoUrl)}
                 alt={user.firstName + "'s photo"}
                 className="w-30 h-30 rounded-full object-cover shrink-0"
             />

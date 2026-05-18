@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import Navbar from "./Navbar";
@@ -12,9 +12,11 @@ const Body = () => {
     const [checkingAuth, setCheckingAuth] = useState(true);
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const fetchUser = useCallback(async () => {
         try {
+            setCheckingAuth(true);
             const user = await api.get("/profile");
             dispatch(addUser(user.data));
         } catch (err: unknown) {
@@ -34,8 +36,13 @@ const Body = () => {
     }, [dispatch, navigate]);
 
     useEffect(() => {
+        if (location.pathname === "/login" || location.pathname === "/signup") {
+            setCheckingAuth(false);
+            return;
+        }
+
         void fetchUser();
-    }, [fetchUser]);
+    }, [fetchUser, location.pathname]);
 
     return (
         <div className="flex min-h-screen flex-col">

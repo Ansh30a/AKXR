@@ -2,6 +2,7 @@ import type { User } from "../types/user";
 import { useDispatch } from "react-redux";
 import { removeFeed } from "../slice/feedSlice";
 import api from "../lib/api";
+import { getProfilePhotoUrl } from "../lib/image";
 
 const UserCard = ({ user }: { user: User }) => {
     const { firstName, photoUrl, bio, lastName, age, gender } = user;
@@ -21,10 +22,7 @@ const UserCard = ({ user }: { user: User }) => {
         <div className="card bg-base-300 w-75 shadow-sm mt-5">
             <figure>
                 <img
-                    src={
-                        photoUrl ??
-                        "https://via.placeholder.com/300x200?text=No+Image"
-                    }
+                    src={getProfilePhotoUrl(photoUrl)}
                     alt={firstName + "'s photo"}
                     className="w-75"
                 />

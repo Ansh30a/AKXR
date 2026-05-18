@@ -3,6 +3,7 @@ import type { RootState } from "../store/appStore";
 import { Link, useNavigate } from "react-router-dom";
 import { removeUser } from "../slice/userSlice";
 import api from "../lib/api";
+import { getProfilePhotoUrl } from "../lib/image";
 
 const Navbar = () => {
     const user = useSelector((store: RootState) => store.user.userInfo);
@@ -43,18 +44,12 @@ const Navbar = () => {
                             role="button"
                             className="btn btn-ghost btn-circle avatar"
                         >
-                            {user.photoUrl ? (
-                                <div className="w-10 rounded-full">
-                                    <img
-                                        alt={`${user.firstName} profile photo`}
-                                        src={user.photoUrl}
-                                    />
-                                </div>
-                            ) : (
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-base-200 text-sm font-semibold">
-                                    {user.firstName.charAt(0)}
-                                </div>
-                            )}
+                            <div className="w-10 rounded-full">
+                                <img
+                                    alt={`${user.firstName} profile photo`}
+                                    src={getProfilePhotoUrl(user.photoUrl)}
+                                />
+                            </div>
                         </div>
                         <ul
                             tabIndex={-1}

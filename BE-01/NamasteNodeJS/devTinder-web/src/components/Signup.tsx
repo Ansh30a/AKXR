@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../lib/api";
+import { getProfilePhotoUrl } from "../lib/image";
 
 const Signup = () => {
     const [firstName, setFirstName] = useState<string>("");
@@ -231,7 +232,11 @@ const Signup = () => {
             </div>
 
             <div className="w-50 mt-50">
-                <img src={photoUrl} className="rounded-full" />
+                <img
+                    src={getProfilePhotoUrl(photoUrl)}
+                    alt="Profile preview"
+                    className="rounded-full"
+                />
             </div>
         </div>
     );

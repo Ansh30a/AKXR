@@ -1,4 +1,5 @@
 import type { User } from "../types/user";
+import { getProfilePhotoUrl } from "../lib/image";
 
 const PreviewCard = ({ user }: { user: User }) => {
     const { firstName, photoUrl, bio, lastName, age, gender } = user;
@@ -7,10 +8,7 @@ const PreviewCard = ({ user }: { user: User }) => {
         <div className="card bg-base-300 w-96 shadow-sm">
             <figure>
                 <img
-                    src={
-                        photoUrl ??
-                        "https://via.placeholder.com/300x200?text=No+Image"
-                    }
+                    src={getProfilePhotoUrl(photoUrl)}
                     alt={firstName + "'s photo"}
                 />
             </figure>
